@@ -24,7 +24,9 @@ const prepareForPrintButton = document.querySelector('#before-print');
 date.valueAsDate = new Date();
 
 // ! Блок для пациента.
-
+function addInfoForPatient() {
+    
+}
 
 
 function addCssForPrint() {
