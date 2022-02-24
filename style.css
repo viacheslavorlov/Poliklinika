@@ -38,7 +38,7 @@ textarea {
     font-size: 19px;
 }
 
-#patien-name {
+#patient-name {
     width: 600px;
 }
 
@@ -95,10 +95,20 @@ input {
 #obrazovania-container {
     display: flex;
 }
-/*  */
+
 input[type='text'] {
     
     width: 90px;
+}
+
+#for-patient {
+    display: flex;
+    width: 900px;
+    height: 300px;
+}
+
+#podpis {
+    padding-bottom: 2em;
 }
 
 
