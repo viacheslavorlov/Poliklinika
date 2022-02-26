@@ -46,9 +46,8 @@ function recomendationList() {
          c ${lnNachalo.value.split('-').reverse().join('.')} по ${lnKonec.value.split('-').reverse().join('')}`]);
     }
 
-    return list.join('. ');
+    return list.join('<br>');
 }
-
 
 
 function addInfoForPatient() {

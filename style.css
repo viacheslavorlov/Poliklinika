@@ -7,15 +7,15 @@ div {
 .complains-container {
     display: flex;
     flex-direction: row;
+    align-content: center;
 }
 #other {
     height: 22px;
     width: 900px;
 }
 
-label[for="other"] {
+label[for='other'] {
     display: flex;
-    flex-direction: row;
 }
 #space {
     width: 10px;
@@ -82,6 +82,7 @@ p {
 
 textarea {
     font-family: 'Times New Roman', Times, serif;
+    font-size: 19px;
 }
 
 select {
@@ -97,29 +98,27 @@ input {
 }
 
 input[type='text'] {
-    
     width: 90px;
 }
 
 #for-patient {
     display: flex;
-    width: 900px;
-    height: 300px;
+    width: 700px;
+    margin-right: 100px;    
 }
 
 #podpis {
     padding-bottom: 2em;
 }
 
-
 @media print {
     main {
-        font-size: 15px;
+        font-size: 19px;
     }
     label {
-        font-size: 15px;
+        font-size: 19px;
     }
-    
+
     .complains-container {
         display: flex;
         flex-direction: row;
@@ -151,7 +150,7 @@ input[type='text'] {
         appearance: none;
         font-size: 15px;
     }
-    
+
     button {
         display: none;
     }
@@ -167,7 +166,12 @@ input[type='text'] {
     label[for='other-obsledovania'] {
         display: none;
     }
-    label[for="other"] {
+    label[for='other'] {
         display: none;
+    }
+
+    #for-patient {
+        margin-right: 100px;   
+        
     }
 }
