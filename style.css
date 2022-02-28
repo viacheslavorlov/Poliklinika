@@ -104,10 +104,10 @@ input[type='text'] {
 
 @media print {
     main {
-        font-size: 15px;
+        font-size: 19px;
     }
     label {
-        font-size: 15px;
+        font-size: 19px;
     }
     
     .complains-container {
@@ -134,12 +134,12 @@ input[type='text'] {
         border: none transparent;
         appearance: none;
         resize: none;
-        font-size: 15px;
+        font-size: 19px;
     }
     select {
         border: none transparent;
         appearance: none;
-        font-size: 15px;
+        font-size: 19px;
     }
     
     button {
