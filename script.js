@@ -56,7 +56,7 @@ function addInfoForPatient() {
         <p><b>Прием колопроктолога.</b></p>
         <p><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></p>
         <p> Дата: ${date.value.split('-').reverse().join('.')}</p>
-        <p>Пациент: ${patientName.value}. Дата рождения: ${birthday.value.split('-').reverse().join('.')}</p>
+        <p>Пациент: ${patientName.value} Дата рождения: ${birthday.value.split('-').reverse().join('.')}</p>
         <p>Диагноз: ${(diagnoz.value == '') ? diagnoz2.value : diagnoz.value}.</p>
         <p>Рекомендации:</p>
         <div><b>${recomendationList()}</b></div>
