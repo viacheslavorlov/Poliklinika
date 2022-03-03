@@ -43,7 +43,8 @@ function recomendationList() {
 
     if (ln.value === 'Нетрудоспособен.') {
         list.push([`${ln.value} ${datLn.value} больничный лист
-         c ${lnNachalo.value.split('-').reverse().join('.')} по ${lnKonec.value.split('-').reverse().join('')}`]);
+        c ${lnNachalo.value.split('-').reverse().join('.')} по ${lnKonec.value.split('-').reverse().join('')}`]);
+
     }
 
     return list.join('<br>');
@@ -51,7 +52,7 @@ function recomendationList() {
 
 
 function addInfoForPatient() {
-   // let diagnozForPatient = (diagnoz.value == '') ? diagnoz2.value : diagnoz.value;
+
     forPatient.innerHTML =
         `<h2>Центр Репродуктивного Здоровья</h2>
         <p><b>Прием колопроктолога.</b></p>
@@ -59,7 +60,6 @@ function addInfoForPatient() {
         <p> Дата: ${date.value.split('-').reverse().join('.')}</p>
         <p>Пациент: ${patientName.value}. Дата рождения: ${birthday.value.split('-').reverse().join('.')}</p>
         <p>Диагноз: ${(diagnoz.value == '') ? diagnoz2.value : diagnoz.value}.</p>
-
         <p>Рекомендации:</p>
         <div><b>${recomendationList()}</b></div>
         <p><i> врач: Орлов В.И. </i></p >
