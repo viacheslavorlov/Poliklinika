@@ -1,6 +1,7 @@
 'use strict';
 //переменные
-const patientName = document.getElementById('patientName');
+const patientName = document.querySelector('#patient-name');
+const birthday = document.querySelector('#birthday');
 const otherComplains = document.querySelector('#other');
 const anamnez = document.querySelector('#hystory');
 const perObl = document.querySelector('#per-obl');
@@ -19,18 +20,53 @@ const otherLechenie = document.querySelector('#other-lechenie');
 const date = document.querySelector('#date');
 const obrazovaniaConteiner = document.querySelector('#obrazovania-conteiner');
 const prepareForPrintButton = document.querySelector('#before-print');
+const forPatient = document.querySelector('.for-patient');
 
 //установить дату приёма на сегодняшний день
 date.valueAsDate = new Date();
 
 // ! Блок для пациента.
+function recomendationList() {
+    let list = [];
+    const recomendation = document.querySelectorAll('.recomendation');
+    const recomendation2 = document.querySelectorAll('.recomendation2');
+    for (let j = 0; j < recomendation2.length; j++) {
+        if (recomendation2[j].value != '') {
+            list.push(recomendation2[j].value);
+        }
+    }
+    for (let i = 0; i < recomendation.length; i++) {
+        if (recomendation[i].checked) {
+            list.push(recomendation[i].value);
+        }
+    }
+
+    if (ln.value === 'Нетрудоспособен.') {
+        list.push([`${ln.value} ${datLn.value} больничный лист
+        c ${lnNachalo.value.split('-').reverse().join('.')} по ${lnKonec.value.split('-').reverse().join('')}`]);
+    }
+
+    return list.join('<br>');
+}
+
+
 function addInfoForPatient() {
-    
+    forPatient.innerHTML =
+        `<h2>Центр Репродуктивного Здоровья</h2>
+        <p><b>Прием колопроктолога.</b></p>
+        <p><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></p>
+        <p> Дата: ${date.value.split('-').reverse().join('.')}</p>
+        <p>Пациент: ${patientName.value}. Дата рождения: ${birthday.value.split('-').reverse().join('.')}</p>
+        <p>Диагноз: ${(diagnoz.value == '') ? diagnoz2.value : diagnoz.value}.</p>
+        <p>Рекомендации:</p>
+        <div><b>${recomendationList()}</b></div>
+        <p><i> врач: Орлов В.И. </i></p >
+        `;
 }
 
 
 function addCssForPrint() {
-    if (ln.value === 'na-rabotu') {
+    if (ln.value === 'Трудоспособен. ЛН не нужен.') {
         datLn.parentElement.style.display = 'none';
         ln.parentElement.style.display = 'none';
     }
@@ -68,23 +104,22 @@ function addCssForPrint() {
     if (otherComplains.value === '') {
         otherComplains.parentElement.style.display = 'none';
     }
-    /*
-    * функция для рпазворота даты ЛН в формат дд.мм.гггг.
-    */
-    
+
+    // * функция для рпазворота даты ЛН в формат дд.мм.гггг.
     lnNachalo.value = lnNachalo.value.split('-').reverse().join('.');
     lnKonec.value = lnKonec.value.split('-').reverse().join('.');
-
 }
 
 
 prepareForPrintButton.addEventListener('click', function (e) {
     addCssForPrint();
+    addInfoForPatient();
     window.print();
 });
 
 document.addEventListener('keydown', function (e) {
     if (e.code === 'KeyP' && e.ctrlKey) {
         addCssForPrint();
+        addInfoForPatient();
     }
 });

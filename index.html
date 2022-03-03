@@ -17,9 +17,9 @@
         <div>
             <span>
                 <label for="patien-name">Пациент: </label>
-                <input id="patien-name" type="text">
+                <input type="text" id="patient-name" name="patient-name">
                 <label for="">Дата рождения: </label>
-                <input type="date">
+                <input id="birthday" type="date">
             </span>
         </div>
         <span>
@@ -28,8 +28,8 @@
         </span>
         </div>
         <div>
-            <p class="complains-container">
-                <span>Жалобы:
+            <p class="complains-container">Жалобы:
+                <span>
                     <input id="blood" type="checkbox" class="complains" name="complains" value="blood">
                     <label for="blood">Кровь в стуле</label>
 
@@ -45,7 +45,7 @@
                     <input id="no" type="checkbox" class="complains" name="complains" value="no">
                     <label for="no">Нет </label>
 
-                    <label for="other">Другие жалобы:<span id="space"> </span></label>
+                    <label for="other">Другие жалобы:<span class="space"> </span></label>
                     <textarea id="other" class="complains" name="complains"></textarea>
                 </span>
             </p>
@@ -117,182 +117,215 @@
                 <textarea id="anoskopia" placeholder=""></textarea>
             </div>
         </div>
-        <div id="diagnoz-conteiner">
-            <h2>Диагноз: </h2>
-            <label for="diagnoz">
-                <select id="diagnoz" placeholder=''>
-                    <option value=""></option>
-                    <option value="gemorroj1">Хронический геморрой 1 ст.</option>
-                    <option value="gemorroj2">Хронический геморрой 2 ст.</option>
-                    <option value="gemorroj3">Хронический геморрой 3 ст.</option>
-                    <option value="gemorroj4">Хронический геморрой 4 ст.</option>
-                    <option value="o-tromboz1">Острый перианальный венозный тромбоз 1 ст.</option>
-                    <option value="o-tromboz2">Острый перианальный венозный тромбоз 2 ст.</option>
-                    <option value="o-tromboz3">Острый перианальный венозный тромбоз 3 ст.</option>
-                    <option value="o-treschina">Острая анальная трещина.</option>
-                    <option value="hr-treschina">Хроническая анальная трещина.</option>
-                    <option value="polip">Полип анального канала.</option>
-                    <option value="svisch">Свищ прямой кишки.</option>
-                    <option value="zud">Анальный зуд.</option>
-                    <option value="o-paraproktit">Острый гнойный парапроктит.</option>
-                    <option value="ekch">Эпитедиальный копчиковый ход."</option>
+        <div id="for-patient-container">
+            <div id="diagnoz-conteiner">
+                <h2>Диагноз: </h2>
+                <label for="diagnoz">
+                    <select id="diagnoz">
+                        <option value=""></option>
+                        <option value="Хронический геморрой 1 ст.">Хронический геморрой 1 ст.</option>
+                        <option value="Хронический геморрой 2 ст.">Хронический геморрой 2 ст.</option>
+                        <option value="Хронический геморрой 3 ст.">Хронический геморрой 3 ст.</option>
+                        <option value="Хронический геморрой 4 ст.">Хронический геморрой 4 ст.</option>
+                        <option value="Острый перианальный венозный тромбоз 1 ст.">Острый перианальный венозный тромбоз
+                            1 ст.</option>
+                        <option value="Острый перианальный венозный тромбоз 2 ст.">Острый перианальный венозный тромбоз
+                            2 ст.</option>
+                        <option value="Острый перианальный венозный тромбоз 3 ст.">Острый перианальный венозный тромбоз
+                            3 ст.</option>
+                        <option value="Острая анальная трещина.">Острая анальная трещина.</option>
+                        <option value="Хроническая анальная трещина.">Хроническая анальная трещина.</option>
+                        <option value="Полип анального канала.">Полип анального канала.</option>
+                        <option value="Свищ прямой кишки.">Свищ прямой кишки.</option>
+                        <option value="Анальный зуд.">Анальный зуд.</option>
+                        <option value="Острый гнойный парапроктит.">Острый гнойный парапроктит.</option>
+                        <option value="Эпитедиальный копчиковый ход.">Эпитедиальный копчиковый ход.</option>
 
-                </select>
-            </label>
-        </div>
-        <div>
-            <label for="diagnoz2"></label>
-            <textarea id="diagnoz2"></textarea>
-        </div>
-
-        <div id="rekomendacyi">
-            <h2>Рекомендации: </h2>
-            <div id="trudosposobnost">
-                <label for="trud">Трудоспособность:</label>
-                <select id="trud">
-                    <option value="na-rabotu">Трудоспособен. ЛН не нужен.</option>
-                    <option value="ne-na-rabotu">Нетрудоспособен.</option>
-                </select>
-                <p><label for="dat-ln"></label><select id="dat-ln">
-                        <option value="pervichnij-ln">Выдать первичный</option>
-                        <option value="prodolzenie-ln">Продлить</option>
                     </select>
-                    больничный лист c <label for="ln-nachalo"></label>
-                    <input id="ln-nachalo" type="text" onfocus="(this.type='date')" onblur="(this.type='text')">по<label
-                        for="ln-konec">
-                        <input id="ln-konec" onfocus="(this.type='date')" onblur="(this.type='text')">
-                    </label>
-                </p>
+                </label>
             </div>
-            <div id="obsledovania">
-                <span><input id="rectoskopia" type="checkbox" value="rectoskopia">
-                    <label for="rectoskopia">Ректороманоскопия</label></span>
+            <div>
+                <label for="diagnoz2"></label>
+                <textarea id="diagnoz2"></textarea>
+            </div>
 
-                <span><input id="colonoskopia" type="checkbox" value="colonoskopia">
-                    <label for="colonoskopia">Колоноскопия</label></span>
-
-                <span><input id="kalprotektin" type="checkbox" value="kalprotektin">
-                    <label for="kalprotektin">Кал на кальпротектин</label></span>
-
-                <div>
-                    <label for="other-obsledovania">Другие обследования:</label>
-                    <textarea id="other-obsledovania" width="50"></textarea>
+            <div id="rekomendacyi">
+                <h2>Рекомендации: </h2>
+                <div id="trudosposobnost">
+                    <label for="trud">Трудоспособность:</label>
+                    <select id="trud">
+                        <option value="Трудоспособен. ЛН не нужен.">Трудоспособен. ЛН не нужен.</option>
+                        <option value="Нетрудоспособен.">Нетрудоспособен.</option>
+                    </select>
+                    <p><label for="dat-ln"></label><select id="dat-ln">
+                            <option value="Выдать первичный">Выдать первичный</option>
+                            <option value="Продлить">Продлить</option>
+                        </select>
+                        больничный лист c <label for="ln-nachalo"></label>
+                        <input id="ln-nachalo" type="text" onfocus="(this.type='date')"
+                            onblur="(this.type='text')">по<label for="ln-konec">
+                            <input id="ln-konec" onfocus="(this.type='date')" onblur="(this.type='text')">
+                        </label>
+                    </p>
                 </div>
+                <div id="obsledovania">
+                    <span><input class="recomendation" id="rectoskopia" type="checkbox" value="Ректороманоскопия">
+                        <label for="rectoskopia">Ректороманоскопия</label></span>
 
-            </div>
-            <div id="lechenie">
-                <span>
-                    <input id="dieta" type="checkbox" value="dieta">
-                    <label for="dieta">
-                        Диета, исключить алкоголь, острую, копчёную и маринованную пищу.
-                    </label>
-                </span>
-                <span>
-                    <input id="nagruzki" type="checkbox" value="nagruzki">
-                    <label for="nagruzki">
-                        Ограничить физические нагрузки, подъём тяжестей.
-                    </label>
-                </span>
-                <span>
-                    <input id="olestezin" type="checkbox" value="olestezin">
-                    <label for="olestezin">
-                        Свечи Олестезин 1 св. 2 раза в день 7-10 дней
-                    </label>
-                </span>
-                <span>
-                    <input id="natalsid" type="checkbox" value="natalsid">
-                    <label for="natalsid">
-                        Свечи Натальсид 1 св. 2 раза в день 7-10 дней
-                    </label>
-                </span>
-                <span>
-                    <input id="pasterizan" type="checkbox" value="pasterizan">
-                    <label for="pasterizan">
-                        Свечи Пастеризан 1 св. 2 раза в день 7-10 дней
-                    </label>
-                </span>
-                <span>
-                    <input id="relifipin" type="checkbox" value="relifipin">
-                    <label for="relifipin">
-                        Мазь Релифипин 2 раза в день 7-10 дней
-                    </label>
-                </span>
-                <span>
-                    <input id="levomekol" type="checkbox" value="levomekol">
-                    <label for="levomekol">
-                        Мазь Левомеколь 2 раза в день 7-10 дней
-                    </label>
-                </span>
-                <span>
-                    <input id="vinilin" type="checkbox" value="vinilin">
-                    <label for="vinilin">
-                        Мазь Винилин 2 раза в день 7-10 дней
-                    </label>
-                </span>
-                <span>
-                    <input id="relif-pro" type="checkbox" value="relif-pro">
-                    <label for="relif-pro">
-                        Свечи Релиф ПРО 1 св. 1 раз в день 7-10 дней
-                    </label>
-                </span>
-                <span>
-                    <input id="mukofalk" type="checkbox" value="mukofalk">
-                    <label for="mukofalk">
-                        Слабительное Мукофальк 1 п 2 р в день 2 недели
-                    </label>
-                </span>
-                <span>
-                    <input id="forlaks" type="checkbox" value="forlaks">
-                    <label for="forlaks">
-                        Слабительное Форлакс 1 п 2 р в день 2 недели
-                    </label>
-                </span>
-                <span>
-                    <input id="vannochki-romashka" type="checkbox" value="vannochki-romashka">
-                    <label for="vannochki-romashka">
-                        Ванночки с отваром ромашки или слабым раствором перманганата калия 2-3 раза в день
-                    </label>
-                </span>
-                <span>
-                    <input id="vannochki-dub" type="checkbox" value="vvannochki-dub">
-                    <label for="vannochki-dub">
-                        Ванночки с отваром коры дуба 2-3 раза в день
-                    </label>
-                </span>
-                <span>
-                    <input id="detralex" type="checkbox" value="detralex">
-                    <label for="vannochki-dub">
-                        Детралекс 1 т 1 р в день, 1 мес.
-                    </label>
-                </span>
-                <span>
-                    <input id="detralex" type="checkbox" value="detralex">
-                    <label for="vannochki-dub">
-                        Детралекс 1 т 3 р в день 3 дня, затем 1 т 2 р в день 3 дня, затем 1 т 1 р в день 1 мес.
-                    </label>
-                </span>
-                <span>
-                    <input id="operacija" type="checkbox" value="operacija">
-                    <label for="operacija">
-                        Плановое оперативное лечение.
-                    </label>
-                </span>
+                    <span><input class="recomendation" id="colonoskopia" type="checkbox" value="Колоноскопия">
+                        <label for="colonoskopia">Колоноскопия</label></span>
 
-                <div>
-                    <label for="other-lechenie">Другие препараты и рекомендлации: </label>
-                    <textarea id="other-lechenie" width="50"></textarea>
+                    <span><input class="recomendation" id="kalprotektin" type="checkbox" value="Кал на кальпротектин">
+                        <label for="kalprotektin">Кал на кальпротектин</label></span>
+
+                    <div>
+                        <label for="other-obsledovania">Другие обследования:</label>
+                        <textarea class="recomendation2" id="other-obsledovania" width="50"></textarea>
+                    </div>
+
+                </div>
+                <div id="lechenie">
+                    <span>
+                        <input class="recomendation" id="dieta" type="checkbox"
+                            value="Диета, исключить алкоголь, острую, копчёную и маринованную пищу">
+                        <label for="dieta">
+                            Диета, исключить алкоголь, острую, копчёную и маринованную пищу
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="nagruzki" type="checkbox"
+                            value="Ограничить физические нагрузки, подъём тяжестей">
+                        <label for="nagruzki">
+                            Ограничить физические нагрузки, подъём тяжестей
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="olestezin" type="checkbox"
+                            value="Свечи Олестезин 1 св. 2 раза в день 7-10 дней">
+                        <label for="olestezin">
+                            Свечи Олестезин 1 св. 2 раза в день 7-10 дней
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="natalsid" type="checkbox"
+                            value="Свечи Натальсид 1 св. 2 раза в день 7-10 дней">
+                        <label for="natalsid">
+                            Свечи Натальсид 1 св. 2 раза в день 7-10 дней
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="pasterizan" type="checkbox"
+                            value="Свечи Пастеризан 1 св. 2 раза в день 7-10 дней">
+                        <label for="pasterizan">
+                            Свечи Пастеризан 1 св. 2 раза в день 7-10 дней
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="nigepan" type="checkbox"
+                            value="Свечи Нигепан 1 св. 2 раза в день 7-10 дней">
+                        <label for="nigepan">
+                            Свечи Нигепан 1 св. 2 раза в день 7-10 дней
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="geparin" type="checkbox"
+                            value="Мазь Гепариновая 3 раза в день 7-10 дней">
+                        <label for="geparin">
+                            Мазь Гепариновая 3 раза в день 7-10 дней
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="relifipin" type="checkbox"
+                            value="Мазь Релифипин 2 раза в день 7-10 дней">
+                        <label for="relifipin">
+                            Мазь Релифипин 2 раза в день 7-10 дней
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="levomekol" type="checkbox"
+                            value="Мазь Левомеколь 2 раза в день 7-10 дней">
+                        <label for="levomekol">
+                            Мазь Левомеколь 2 раза в день 7-10 дней
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="vinilin" type="checkbox"
+                            value="Мазь Винилин 2 раза в день 7-10 дней">
+                        <label for="vinilin">
+                            Мазь Винилин 2 раза в день 7-10 дней
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="relif-pro" type="checkbox"
+                            value="Свечи Релиф ПРО 1 св. 1 раз в день 7-10 дней">
+                        <label for="relif-pro">
+                            Свечи Релиф ПРО 1 св. 1 раз в день 7-10 дней
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="mukofalk" type="checkbox"
+                            value="Слабительное Мукофальк 1 п 2 р в день 2 недели">
+                        <label for="mukofalk">
+                            Слабительное Мукофальк 1 п 2 р в день 2 недели
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="forlaks" type="checkbox"
+                            value="Слабительное Форлакс 1 п 2 р в день 2 недели">
+                        <label for="forlaks">
+                            Слабительное Форлакс 1 п 2 р в день 2 недели
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="vannochki-romashka" type="checkbox"
+                            value="Ванночки с отваром ромашки или слабым раствором перманганата калия 2-3 раза в день">
+                        <label for="vannochki-romashka">
+                            Ванночки с отваром ромашки или слабым раствором перманганата калия 2-3 раза в день
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="vannochki-dub" type="checkbox"
+                            value="Ванночки с отваром коры дуба 2-3 раза в день">
+                        <label for="vannochki-dub">
+                            Ванночки с отваром коры дуба 2-3 раза в день
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="detralex" type="checkbox"
+                            value="Детралекс 1 т 1 р в день, 1 мес">
+                        <label for="detralex">
+                            Детралекс 1 т 1 р в день, 1 мес.
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="detralex2" type="checkbox"
+                            value="Детралекс 1 т 3 р в день 3 дня, затем 1 т 2 р в день 3 дня, затем 1 т 1 р в день 1 мес">
+                        <label for="detralex2">
+                            Детралекс 1 т 3 р в день 3 дня, затем 1 т 2 р в день 3 дня, затем 1 т 1 р в день 1 мес.
+                        </label>
+                    </span>
+                    <span>
+                        <input class="recomendation" id="operacija" type="checkbox"
+                            value="Плановое оперативное лечение">
+                        <label for="operacija">
+                            Плановое оперативное лечение.
+                        </label>
+                    </span>
+
+                    <div>
+                        <label for="other-lechenie">Другие препараты и рекомендлации: </label>
+                        <textarea class="recomendation2" id="other-lechenie"></textarea>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div>
-            <p><i>врач: Орлов В.И.</i></p>
-            <button id="before-print">Форматирование и печать</button>
+            <div>
+                <p id="podpis"><i>врач: Орлов В.И.</i></p>
+                <button id="before-print">Форматирование и печать</button>
+            </div>
         </div>
-
-        <div class="for-patient">
-            
-        </div>
+        <hr>
+        <div class="for-patient"></div>
 
     </main>
     <script src="./script.js"></script>
