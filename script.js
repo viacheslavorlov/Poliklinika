@@ -44,6 +44,7 @@ function recomendationList() {
     if (ln.value === 'Нетрудоспособен.') {
         list.push([`${ln.value} ${datLn.value} больничный лист
         c ${lnNachalo.value.split('-').reverse().join('.')} по ${lnKonec.value.split('-').reverse().join('')}`]);
+
     }
 
     return list.join('<br>');
@@ -51,6 +52,7 @@ function recomendationList() {
 
 
 function addInfoForPatient() {
+
     forPatient.innerHTML =
         `<h2>Центр Репродуктивного Здоровья</h2>
         <p><b>Прием колопроктолога.</b></p>
