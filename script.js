@@ -104,7 +104,7 @@ function addCssForPrint() {
         obrazovaniaConteiner.style.flexDirection = 'row';
     }
     if (otherComplains.value === '') {
-        otherComplains.parentElement.style.display = 'none';
+        otherComplains.style.display = 'none';
     }
 
     // * функция для рпазворота даты ЛН в формат дд.мм.гггг.
