@@ -59,7 +59,7 @@ function addInfoForPatient() {
         <p><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></p>
         <p> Дата: ${date.value.split('-').reverse().join('.')}</p>
         <p>Пациент: ${patientName.value} Дата рождения: ${birthday.value.split('-').reverse().join('.')}</p>
-        <p>Диагноз: ${(diagnoz.value == '') ? diagnoz2.value : diagnoz.value}.</p>
+        <p>Диагноз: ${(diagnoz.value == '') ? diagnoz2.value : diagnoz.value + ' ' + diagnoz2.value}</p>
         <p>Рекомендации:</p>
         <div><b>${recomendationList()}</b></div>
         <p><i> врач: Орлов В.И. </i></p >
@@ -78,10 +78,8 @@ function addCssForPrint() {
     if (otherObsledovania.value === '') {
         otherObsledovania.parentElement.style.display = 'none';
     }
-    if (diagnoz.value !== '') {
+    if (diagnoz2.value === '') {
         diagnoz2.parentElement.style.display = 'none';
-    } else {
-        diagnoz.parentElement.style.display = 'none';
     }
     if (otherObsledovania.value === '') {
         otherObsledovania.parentElement.style.display = 'none';
@@ -108,6 +106,7 @@ function addCssForPrint() {
     }
 
     // * функция для рпазворота даты ЛН в формат дд.мм.гггг.
+
     lnNachalo.value = lnNachalo.value.split('-').reverse().join('.');
     lnKonec.value = lnKonec.value.split('-').reverse().join('.');
 }
