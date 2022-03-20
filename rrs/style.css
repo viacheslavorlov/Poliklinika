@@ -29,6 +29,7 @@ span input[type='text'] {
 #perianalnaja_oblast_dop {
     height: 2em;
     width: 690px;
+    resize: none;
 }
 
 .obrazovania {
@@ -40,16 +41,20 @@ span input[type='text'] {
 #dopobrazovanija {
     width: 550px;
     height: 1.5em;
+    resize: none;
+    margin-left: 5px;
 }
 
 #zakluchenie__input {
     width: 690px;
     font-weight: 800;
+    resize: none;
 }
 
 #slizistaja__dop {
     height: 2em;
     width: 690px;
+    resize: none;
 }
 
 footer {
@@ -61,7 +66,8 @@ footer {
     input,
     select,
     option,
-    input[type='date'] {
+    input[type='date'],
+    textarea {
         appearance: none;
         border: none transparent;
         background-color: #ffffff;
