@@ -17,7 +17,7 @@ div {
 label[for='other'] {
     display: flex;
 }
-#space {
+.space {
     width: 10px;
 }
 
@@ -174,4 +174,6 @@ input[type='text'] {
         margin-right: 100px;   
         
     }
+
 }
+

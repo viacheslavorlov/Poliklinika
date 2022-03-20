@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>RRS</title>
+</head>
+<body>
+    <header>
+        <h1>Центр Репродуктивного Здоровья.</h1>
+        <h2><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></h2>
+        <h2>Ректороманоскопия.</h2>
+    </header>
+    <main>
+        <div class="fio">
+            <label for="fio__input">Ф.И.О. пациента: </label>
+            <input class="fio__input" type="text">
+        </div>
+        <div class="date">
+            <input type="date">
+        </div>
+        <div class="opisanie">
+            <div>
+                <span>
+                    Перианальная область:
+                    <select name="perianalnaja_oblast" id="perianalnaja_oblast">
+                        <option value="не изменена.">не изменена.</option>
+                        <option value="гиперемирована">гиперемирована</option>
+                        <option value="имеется рубцовая деформация">имеется рубцовая деформация</option>
+                    </select>
+                </span>
+                <div>
+                    <span>
+                        Сфинктр в 
+                        <select name="tonus" id="tonus">
+                            <option value="нормотонусе">нормотонусе</option>
+                            <option value="гипертонусе">гипертонусе</option>
+                            <option value="гипотонусе">гипотонусе</option>
+                        </select>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <label for="glubina">Осмотр до </label>
+                        <input type="range" id="glubina" min="2" max="30" step="1">
+                        <input type="text" id="glubina__value">
+                        <select>
+                            <option value="далее резкий изгиб, аппарат не провести.">далее резкий изгиб, аппарат не
+                                провести.</option>
+                            <option value="на всю длину аппарата">на всю длину аппарата.</option>
+                            <option value="далее продвижение аппарата болезненно.">далее продвижение аппарата
+                                болезненно.</option>
+                            <option value="далее просвет стенозирован.">далее просвет стенозирован.</option>
+                        </select>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <label for="slizistaja">Слизистая: </label>
+                        <select id="slizistaja">
+                            <option value="розовая, блестящая.">розовая, блестящая.</option>
+                            <option value="гиперемирована.">гиперемирована.</option>
+                            <option value=""></option>
+                        </select>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <label for="skladki">Складки: </label>
+                        <select id="skladki">
+                            <option value="выражены, хорошо расправлются при инсуфляции">выражены, хорошо расправлются при инсуфляции.</option>
+                            <option value="сглажены.">сглажены.</option>
+                            <option value="ригидные.">ригидные.</option>
+                        </select>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <label for="sosudistiy_risunok">Сосудистый рисунок: </label>
+                        <select id="sosudistiy_risunok">
+                            <option value="выражен, четкий.">выражен, четкий.</option>
+                            <option value="смазан.">смазан.</option>
+                            <option value="не прослеживается.">не прослеживается.</option>
+                            <option value=""></option>
+                        </select>
+                    </span>
+                </div>
+                <div class="obrazovania">
+                    <label for="dopobrazovanija">Дополнительные образования: </label>
+                    <textarea name="dopobrazovanija" id="dopobrazovanija"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="zakluchenie">
+            <label for="zakluchenie__input"></label>
+            <textarea id="zakluchenie__input">Заключение: </textarea>
+        </div>
+    </main>
+    <footer class="podpis"><i>вр. Орлов В.И.</i></footer>
+</body>
+</html>
