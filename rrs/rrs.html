@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>RRS</title>
 </head>
 <body>
@@ -82,16 +83,21 @@
                             <option value="выражен, четкий.">выражен, четкий.</option>
                             <option value="смазан.">смазан.</option>
                             <option value="не прослеживается.">не прослеживается.</option>
+                            <option value=""></option>
                         </select>
                     </span>
                 </div>
-                <div>
-                    <label for="dopobrazovanija">Дополнительные образования: </label><input type="text" name="dopobrazovanija" id="dopobrazovanija">
+                <div class="obrazovania">
+                    <label for="dopobrazovanija">Дополнительные образования: </label>
+                    <textarea name="dopobrazovanija" id="dopobrazovanija"></textarea>
                 </div>
             </div>
         </div>
-        <div class="zakluchenie"></div>
+        <div class="zakluchenie">
+            <label for="zakluchenie__input"></label>
+            <textarea id="zakluchenie__input">Заключение: </textarea>
+        </div>
     </main>
-    <footer class="podpis"></footer>
+    <footer class="podpis"><i>вр. Орлов В.И.</i></footer>
 </body>
 </html>
