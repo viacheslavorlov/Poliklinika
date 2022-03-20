@@ -22,9 +22,19 @@ input[type="date"] {
     font-family:'Times New Roman', Times, serif;
 }
 
+span input[type='text'] {
+    width: 25px;
+}
+
+#perianalnaja_oblast_dop {
+    height: 2em;
+    width: 690px;
+}
+
 .obrazovania {
     display: flex;
     flex-direction: row;
+    align-items: baseline;
 }
 
 #dopobrazovanija {
@@ -34,17 +44,31 @@ input[type="date"] {
 
 #zakluchenie__input {
     width: 690px;
+    font-weight: 800;
+}
 
+#slizistaja__dop {
+    height: 2em;
+    width: 690px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
 }
 
 @media print {
-    input, select, option input[type="date"]{
+    input, select, option, input[type="date"]{
         appearance: none;
         border: none transparent;
         background-color: #ffffff;
     }
 
     input[type="range"] {
+        display: none;
+    }
+
+    button {
         display: none;
     }
 }

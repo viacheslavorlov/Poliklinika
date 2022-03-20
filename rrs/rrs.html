@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <title>RRS</title>
 </head>
+
 <body>
     <header>
         <h1>Центр Репродуктивного Здоровья.</h1>
@@ -17,9 +19,12 @@
         <div class="fio">
             <label for="fio__input">Ф.И.О. пациента: </label>
             <input class="fio__input" type="text">
+            <label for="birthday">Дата рождения: </label>
+            <input type="date" name="birthday" id="birthday">
         </div>
-        <div class="date">
-            <input type="date">
+        <div>
+            <label for="date">Дата осмотра: </label>
+            <input id="date" type="date">
         </div>
         <div class="opisanie">
             <div>
@@ -32,8 +37,12 @@
                     </select>
                 </span>
                 <div>
+                    <textarea name=perianalnaja_oblast_dop"
+                        id="perianalnaja_oblast_dop">Дополнительно по перианальной области: </textarea>
+                </div>
+                <div>
                     <span>
-                        Сфинктр в 
+                        Сфинктр в
                         <select name="tonus" id="tonus">
                             <option value="нормотонусе">нормотонусе</option>
                             <option value="гипертонусе">гипертонусе</option>
@@ -44,8 +53,7 @@
                 <div>
                     <span>
                         <label for="glubina">Осмотр до </label>
-                        <input type="range" id="glubina" min="2" max="30" step="1">
-                        <input type="text" id="glubina__value">
+                        <input type="text" id="glubina__value">см
                         <select>
                             <option value="далее резкий изгиб, аппарат не провести.">далее резкий изгиб, аппарат не
                                 провести.</option>
@@ -64,13 +72,20 @@
                             <option value="гиперемирована.">гиперемирована.</option>
                             <option value=""></option>
                         </select>
+                        <span id="oblast_giperemii">
+                            c <input type="text" name="slizistaja">см по <input type="text" name="slizistaja">см
+                        </span>
                     </span>
+                    <div>
+                        <textarea id="slizistaja__dop">Слизистая</textarea>
+                    </div>
                 </div>
                 <div>
                     <span>
                         <label for="skladki">Складки: </label>
                         <select id="skladki">
-                            <option value="выражены, хорошо расправлются при инсуфляции">выражены, хорошо расправлются при инсуфляции.</option>
+                            <option value="выражены, хорошо расправлются при инсуфляции">выражены, хорошо расправлются
+                                при инсуфляции.</option>
                             <option value="сглажены.">сглажены.</option>
                             <option value="ригидные.">ригидные.</option>
                         </select>
@@ -91,6 +106,19 @@
                     <label for="dopobrazovanija">Дополнительные образования: </label>
                     <textarea name="dopobrazovanija" id="dopobrazovanija"></textarea>
                 </div>
+                <div>
+                    <label for="uzly">Геморроидальные узлы: </label>
+                    <select name="" id="uzly">
+                        <option value="умеренно выражены">умеренно выражены</option>
+                        <option value="не выражены, спавшиеся">не выражены, спавшиеся</option>
+                        <option value="выраженные внутренние геморроидальные узлы">выраженные внутренние геморроидальные
+                            узлы</option>
+                        <option value="выраженные внутренние геморроидальные узлы с эррозиями">выраженные внутренние
+                            геморроидальные узлы с эррозиями</option>
+                        <option value="выраженные наружные и внутренние геморроидальные узлы">выраженные наружные и
+                            внутренние геморроидальные узлы</option>
+                    </select>
+                </div>
             </div>
         </div>
         <div class="zakluchenie">
@@ -98,6 +126,11 @@
             <textarea id="zakluchenie__input">Заключение: </textarea>
         </div>
     </main>
-    <footer class="podpis"><i>вр. Орлов В.И.</i></footer>
+    <footer class="podpis">
+        <i>вр. Орлов В.И.</i>
+        <button>Печать</button>
+    </footer>
+    <script src="./script.js"></script>
 </body>
+
 </html>
