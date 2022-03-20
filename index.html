@@ -16,17 +16,16 @@
         </header>
         <div>
             <span>
-                <label for="patien-name">Пациент: </label>
+                <label for="patient-name">Пациент: </label>
                 <input type="text" id="patient-name" name="patient-name">
-                <label for="">Дата рождения: </label>
+                <label for="birthday">Дата рождения: </label>
                 <input id="birthday" type="date">
             </span>
         </div>
         <span>
             <label for="date">Дата: </label>
             <input id="date" type="date">
-        </span>
-        </div>
+        </span>    
         <div>
             <p class="complains-container">Жалобы:
                 <span>
@@ -45,7 +44,7 @@
                     <input id="no" type="checkbox" class="complains" name="complains" value="no">
                     <label for="no">Нет </label>
 
-                    <label for="other">Другие жалобы:<span class="space"> </span></label>
+                    <label for="other">Другие жалобы: </label>
                     <textarea id="other" class="complains" name="complains"></textarea>
                 </span>
             </p>
@@ -119,27 +118,31 @@
         </div>
         <div id="for-patient-container">
             <div id="diagnoz-conteiner">
-                <h2>Диагноз: </h2>
-                <label for="diagnoz">
+                
+                <label for="diagnoz"><h2>Диагноз: </h2>
                     <select id="diagnoz">
                         <option value=""></option>
-                        <option value="Хронический геморрой 1 ст.">Хронический геморрой 1 ст.</option>
-                        <option value="Хронический геморрой 2 ст.">Хронический геморрой 2 ст.</option>
-                        <option value="Хронический геморрой 3 ст.">Хронический геморрой 3 ст.</option>
-                        <option value="Хронический геморрой 4 ст.">Хронический геморрой 4 ст.</option>
-                        <option value="Острый перианальный венозный тромбоз 1 ст.">Острый перианальный венозный тромбоз
+                        <option value="Хронический геморрой 1 ст."> К64.0 Хронический геморрой 1 ст.</option>
+                        <option value="Хронический геморрой 2 ст."> К64.1 Хронический геморрой 2 ст.</option>
+                        <option value="Хронический геморрой 3 ст."> К64.2 Хронический геморрой 3 ст.</option>
+                        <option value="Хронический геморрой 4 ст."> К64.3 Хронический геморрой 4 ст.</option>
+                        <option value="Острый перианальный венозный тромбоз 1 ст."> К64.5 Острый перианальный венозный
+                            тромбоз
                             1 ст.</option>
-                        <option value="Острый перианальный венозный тромбоз 2 ст.">Острый перианальный венозный тромбоз
+                        <option value="Острый перианальный венозный тромбоз 2 ст."> К64.5 Острый перианальный венозный
+                            тромбоз
                             2 ст.</option>
-                        <option value="Острый перианальный венозный тромбоз 3 ст.">Острый перианальный венозный тромбоз
+                        <option value="Острый перианальный венозный тромбоз 3 ст."> К64.5 Острый перианальный венозный
+                            тромбоз
                             3 ст.</option>
-                        <option value="Острая анальная трещина.">Острая анальная трещина.</option>
-                        <option value="Хроническая анальная трещина.">Хроническая анальная трещина.</option>
-                        <option value="Полип анального канала.">Полип анального канала.</option>
-                        <option value="Свищ прямой кишки.">Свищ прямой кишки.</option>
-                        <option value="Анальный зуд.">Анальный зуд.</option>
-                        <option value="Острый гнойный парапроктит.">Острый гнойный парапроктит.</option>
-                        <option value="Эпитедиальный копчиковый ход.">Эпитедиальный копчиковый ход.</option>
+                        <option value="Острая анальная трещина."> К60.0 Острая анальная трещина.</option>
+                        <option value="Хроническая анальная трещина."> К60.1 Хроническая анальная трещина.</option>
+                        <option value="Полип анального канала."> K62.0 Полип анального канала.</option>
+                        <option value="Свищ прямой кишки."> K60.4 Свищ прямой кишки.</option>
+                        <option value="Анальный зуд."> L29.0 Анальный зуд.</option>
+                        <option value="Острый гнойный парапроктит."> K61.0 Острый гнойный парапроктит.</option>
+                        <option value="Эпитедиальный копчиковый ход."> L05.9 Эпитедиальный копчиковый ход.</option>
+                        <option value="Эпитедиальный копчиковый ход, нагноение."> L05.0 Эпитедиальный копчиковый ход, нагноение.</option>
 
                     </select>
                 </label>
@@ -180,7 +183,7 @@
 
                     <div>
                         <label for="other-obsledovania">Другие обследования:</label>
-                        <textarea class="recomendation2" id="other-obsledovania" width="50"></textarea>
+                        <textarea class="recomendation2" id="other-obsledovania"></textarea>
                     </div>
 
                 </div>
