@@ -42,7 +42,7 @@ button.addEventListener('click', (e) => {
     clearElement(slizistajaDop, 'Слизистая');
     clearElement(perOblDop, 'Дополнительно по перианальной области: ');
     clearElementIfotherElement(oblastGiperemii, slizistaja, 'розовая, блестящая.');
-    clearElementIfotherElement(sosudistiyRisunok, sosudistiyRisunokParent, '');
+    clearElementIfotherElement(sosudistiyRisunokParent, sosudistiyRisunok, '');
     if (dopobrazovanija.value === '') {
         dopobrazovanija.value = 'нет';
     }
