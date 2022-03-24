@@ -1,10 +1,4 @@
-/*
-1. Дата автоматически меняющаяся на сегодняшний день.
-2. Добавить дополнительно по перианальной области.
-4. Удалять дополнительный блок по сизистой если он пустой или содержит "дополнительно по слизистой"
-5. Дополнительные образования flex: baseline
-6. AddEventListener на кнопку и на "Сtrl+P"
-*/
+'use strict';
 
 //переменные
 const date = document.querySelector('#date');
@@ -17,14 +11,14 @@ const dopobrazovanija = document.querySelector('#dopobrazovanija');
 const sosudistiyRisunok = document.querySelector('#sosudistiy_risunok');
 const sosudistiyRisunokParent = sosudistiyRisunok.parentElement;
 
-//функции
-function getTodayDate() {
-    date.valueAsDate = new Date();
-    date.type = 'text';
-    date.value = date.value.split('-').reverse().join('.');
-}
-getTodayDate();
+// установка даты
 
+date.valueAsDate = new Date();
+date.type = 'text';
+date.value = date.value.split('-').reverse().join('.');
+
+
+//функции
 function clearElement(elem, falseValue) {
     if (elem.value === '' || elem.value === falseValue) {
         elem.style.display = 'none';
