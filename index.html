@@ -26,26 +26,27 @@
             <label for="date">Дата: </label>
             <input id="date" type="date">
         </span>    
-        <div>
+        <div id="osmotr">
             <p class="complains-container">Жалобы:
                 <span>
-                    <input id="blood" type="checkbox" class="complains" name="complains" value="blood">
+                    <input id="blood" type="checkbox" class="complains" name="complains" value="кровь в стуле">
                     <label for="blood">Кровь в стуле</label>
 
-                    <input id="pain" type="checkbox" class="complains" name="complains" value="pain">
+                    <input id="pain" type="checkbox" class="complains" name="complains" value="боль при дефекации">
                     <label for="pain">Боль при дефекации </label>
 
-                    <input id="neo" type="checkbox" class="complains" name="complains" value="neo">
+                    <input id="neo" type="checkbox" class="complains" name="complains"
+                        value="образование в области ануса">
                     <label for="neo">Образование в области ануса </label>
 
-                    <input id="itch" type="checkbox" class="complains" name="complains" value="itch">
+                    <input id="itch" type="checkbox" class="complains" name="complains" value="зуд в анальном канале">
                     <label for="itch">Зуд в анальном канале </label>
 
-                    <input id="no" type="checkbox" class="complains" name="complains" value="no">
+                    <input id="no" type="checkbox" class="complains" name="complains" value="нет">
                     <label for="no">Нет </label>
 
                     <label for="other">Другие жалобы: </label>
-                    <textarea id="other" class="complains" name="complains"></textarea>
+                    <textarea id="other" name="complains"></textarea>
                 </span>
             </p>
 
@@ -57,19 +58,19 @@
         <div id="sostojanie">
             <label for="condition">Состояние: </label>
             <select name="condition" id="condition">
-                <option value="ud">удовлетворительное</option>
-                <option value="otn-ud">относительно удовлетворительное</option>
-                <option value="sr">средней тяжести</option>
+                <option value="удовлетворительное">удовлетворительное</option>
+                <option value="относительно удовлетворительное">относительно удовлетворительное</option>
+                <option value="средней тяжести">средней тяжести</option>
             </select>
         </div>
         <div>
             <span>
                 <label for="stul">Стул: </label>
                 <select name="stul" id="stul">
-                    <option value="">Нормальный</option>
-                    <option value="">Запоры</option>
-                    <option value="">Жидкий стул</option>
-                    <option value="">Чередование запоров и поносов</option>
+                    <option value="Нормальный">Нормальный</option>
+                    <option value="Запоры">Запоры</option>
+                    <option value="Жидкий стул">Жидкий стул</option>
+                    <option value="Чередование запоров и поносов">Чередование запоров и поносов</option>
                 </select>
             </span>
         </div>
@@ -77,18 +78,20 @@
             <span>
                 <label for="per-obl">Перианальная область: </label>
                 <select id="per-obl">
-                    <option value="norm">Не изменена.</option>
-                    <option value="giper">Гиперемирована.</option>
-                    <option value="scar">Деформирована за счет послеоперационных рубцов.</option>
+                    <option value="не изменена">Не изменена.</option>
+                    <option value="Гиперемирована">Гиперемирована.</option>
+                    <option value="Деформирована за счет послеоперационных рубцов.">Деформирована за счет
+                        послеоперационных рубцов.</option>
                 </select>
             </span>
-            <textarea id="per-obl-add">Дополнительно по перианальной области: </textarea>
+            <label for="per-obl-add">Дополнительно по перианальной области: 
+            <textarea id="per-obl-add"></textarea></label>
             <span>
                 <label for="tonus">Тонус сфинктера: </label>
                 <select id="tonus">
-                    <option value="norm">Нормотонус</option>
-                    <option value="giper">Гипертонус</option>
-                    <option value="gipo">Гипотонус</option>
+                    <option value="Нормотонус">Нормотонус</option>
+                    <option value="Гипертонус">Гипертонус</option>
+                    <option value="Гипотонус">Гипотонус</option>
                 </select>
             </span>
             <div>
@@ -99,10 +102,11 @@
                 <span>
                     <label for="uzly">Выпадение геморроидальных узлов: </label>
                     <select id="uzly">
-                        <option value="net">Нет</option>
-                        <option value="samostojatelno">Вправляются самостоятельно</option>
-                        <option value="ruchnoe-posobie">Требуют ручного пособия при вправлении</option>
-                        <option value="nevpravimie">Невправимое выпадение узлов</option>
+                        <option value="Нет">Нет</option>
+                        <option value="Вправляются самостоятельно">Вправляются самостоятельно</option>
+                        <option value="Требуют ручного пособия при вправлении">Требуют ручного пособия при вправлении
+                        </option>
+                        <option value="Невправимое выпадение узлов">Невправимое выпадение узлов</option>
                     </select>
                 </span>
             </div>
@@ -112,7 +116,7 @@
             </div>
             <div>
                 <label for="anoskopia">Аноскопия: </label>
-                <textarea id="anoskopia" placeholder=""></textarea>
+                <textarea id="anoskopia"></textarea>
             </div>
         </div>
         <div id="for-patient-container">
@@ -325,11 +329,11 @@
                 <p id="podpis"><i>врач: Орлов В.И.</i></p>
                 <button id="before-print">Форматирование и печать</button>
             </div>
-        </div>
-        <hr>
-        <div class="for-patient"></div>
-
+        </div>  
     </main>
+    <div class="for-cart"></div>
+    <hr>
+    <div class="for-patient"></div>
     <script src="./script.js"></script>
 </body>
 
