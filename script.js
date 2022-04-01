@@ -98,10 +98,10 @@ function addInfoForPatient() {
         `<h2>Центр Репродуктивного Здоровья</h2>
         <p><b>Прием колопроктолога.</b></p>
         <p><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></p>
-        <p> Дата: ${date.value.split('-').reverse().join('.')}</p>
+        <p>Дата: ${date.value.split('-').reverse().join('.')}</p>
         <p>Пациент: ${patientName.value} Дата рождения: ${birthday.value.split('-').reverse().join('.')}</p>
-        <p><bold>Диагноз: ${(diagnoz.value == '') ? diagnoz2.value : diagnoz.value + ' ' + diagnoz2.value}</bold></p>
-        <p>Рекомендации:</p>
+        <p><b>Диагноз: ${(diagnoz.value == '') ? diagnoz2.value : diagnoz.value + ' ' + diagnoz2.value}</b></p>
+        <p><b>Рекомендации:</b></p>
         <div><b>${recomendationList()}</b></div>
         <p><i> врач: Орлов В.И. </i></p >
         `;

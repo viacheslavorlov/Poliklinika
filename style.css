@@ -57,6 +57,10 @@ h2 {
     margin: 0 0 0 0;
 }
 
+#per-obl-add {
+    width: 1100px;
+}
+
 #diagnoz {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.2em;
