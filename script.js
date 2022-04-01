@@ -1,5 +1,6 @@
 'use strict';
 //переменные
+
 const patientName = document.querySelector('#patient-name');
 const birthday = document.querySelector('#birthday');
 const otherComplains = document.querySelector('#other');
