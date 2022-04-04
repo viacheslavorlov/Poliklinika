@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="rrs/rrsstyle.css">
     <title>RRS</title>
 </head>
 
 <body>
     <header>
-        <h1>Центр Репродуктивного Здоровья.</h1>
+        <img src='img/logo.svg'>
+        <h1>Ректороманоскопия.</h1>
         <h2><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></h2>
-        <h2>Ректороманоскопия.</h2>
     </header>
     <main>
         <div class="fio">
@@ -53,7 +53,7 @@
                 <div>
                     <span>
                         <label for="glubina">Осмотр до </label>
-                        <input type="text" id="glubina__value">см
+                        <input type="number" id="glubina__value" min="0" max="30">см
                         <select>
                             <option value="далее резкий изгиб, аппарат не провести.">далее резкий изгиб, аппарат не
                                 провести.</option>
@@ -130,7 +130,7 @@
         <i>вр. Орлов В.И.</i>
         <button>Печать</button>
     </footer>
-    <script src="./script.js"></script>
+    <script src="scripts/rrs.js"></script>
 </body>
 
 </html>

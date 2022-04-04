@@ -2,6 +2,7 @@
 
 //переменные
 const date = document.querySelector('#date');
+const birthday = document.querySelector('#birthday');
 const perOblDop = document.querySelector('#perianalnaja_oblast_dop');
 const slizistajaDop = document.querySelector('#slizistaja__dop');
 const button = document.querySelector('button');
@@ -14,8 +15,6 @@ const sosudistiyRisunokParent = sosudistiyRisunok.parentElement;
 // установка даты
 
 date.valueAsDate = new Date();
-date.type = 'text';
-date.value = date.value.split('-').reverse().join('.');
 
 
 //функции

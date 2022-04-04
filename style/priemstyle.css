@@ -111,6 +111,11 @@ input[type='text'] {
     margin-right: 100px;    
 }
 
+img {
+    height: 100px;
+    margin-left: 0;
+}
+
 #podpis {
     padding-bottom: 2em;
 }

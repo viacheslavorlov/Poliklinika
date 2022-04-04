@@ -50,7 +50,8 @@ function recomendationList() {
 
     if (ln.value === 'Нетрудоспособен.') {
         list.push([`${ln.value} ${datLn.value} больничный лист
-        c ${lnNachalo.value.split('-').reverse().join('.')} по ${lnKonec.value.split('-').reverse().join('')}`]);
+        c ${lnNachalo.value.split('-').reverse().join('.')} по ${lnKonec.value.split('-').reverse().join('')}.
+        Контрольная явка на ${lnKonec.value.split('-').reverse().join('')}`]);
 
     }
 
@@ -71,8 +72,7 @@ function textForCart() {
         
     
     forCart.innerHTML = `
-        <h2>Центр Репродуктивного Здоровья</h2>
-        <p><b>Прием колопроктолога.</b></p>
+        <h2><b>Прием колопроктолога.</b></h2>
         <p><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></p>
         <p> Дата: ${date.value.split('-').reverse().join('.')}</p>
         <p>Пациент: ${patientName.value} Дата рождения: ${birthday.value.split('-').reverse().join('.')}</p>
@@ -96,8 +96,8 @@ function textForCart() {
 function addInfoForPatient() {
 
     forPatient.innerHTML =
-        `<h2>Центр Репродуктивного Здоровья</h2>
-        <p><b>Прием колопроктолога.</b></p>
+        `
+        <h2><b>Прием колопроктолога.</b></h2>
         <p><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></p>
         <p>Дата: ${date.value.split('-').reverse().join('.')}</p>
         <p>Пациент: ${patientName.value} Дата рождения: ${birthday.value.split('-').reverse().join('.')}</p>
@@ -110,30 +110,30 @@ function addInfoForPatient() {
 
 
 function addCssForPrint() {
-    if (ln.value === 'Трудоспособен. ЛН не нужен.') {
-        datLn.parentElement.style.display = 'none';
-        ln.parentElement.style.display = 'none';
-    }
+    // if (ln.value === 'Трудоспособен. ЛН не нужен.') {
+    //     datLn.parentElement.style.display = 'none';
+    //     ln.parentElement.style.display = 'none';
+    // }
     
-    if (otherLechenie.value === '') {
-        otherLechenie.parentElement.style.display = 'none';
-    }
+    // if (otherLechenie.value === '') {
+    //     otherLechenie.parentElement.style.display = 'none';
+    // }
     
-    if (otherObsledovania.value === '') {
-        otherObsledovania.parentElement.style.display = 'none';
-    }
+    // if (otherObsledovania.value === '') {
+    //     otherObsledovania.parentElement.style.display = 'none';
+    // }
     
-    if (diagnoz2.value === '') {
-        diagnoz2.parentElement.style.display = 'none';
-    }
+    // if (diagnoz2.value === '') {
+    //     diagnoz2.parentElement.style.display = 'none';
+    // }
     
-    if (otherObsledovania.value === '') {
-        otherObsledovania.parentElement.style.display = 'none';
-    }
+    // if (otherObsledovania.value === '') {
+    //     otherObsledovania.parentElement.style.display = 'none';
+    // }
     
-    if (anoskopia.value === '') {
-        anoskopia.parentElement.style.display = 'none';
-    }
+    // if (anoskopia.value === '') {
+    //     anoskopia.parentElement.style.display = 'none';
+    // }
     
     if (obrazovania.value === '') {
         obrazovania.value = 'нет';
