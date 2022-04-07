@@ -54,7 +54,6 @@ function recomendationList() {
         Контрольная явка на ${lnKonec.value.split('-').reverse().join('')}`]);
 
     }
-
     return list.join('<br>');
 }
 
@@ -80,7 +79,9 @@ function textForCart() {
         <div>${anamnez.value}</div>
         <div>Состояние: ${condition.value}</div>
         <div>Стул: ${stul.value}</div>
-        <div>Перианальная область: ${perObl.value + ' ' + ((perOblAdd.value == '') ? '' : perOblAdd.value)}</div>
+        <div>
+        Перианальная область: ${(perObl.value == '') ? 'не изменена.' : perObl.value + ' ' +  perOblAdd.value}
+        </div>
         <div>Тонус сфинктера: ${tonus.value}</div>       
         <div>
         Геморроидальные узлы на 3, 7, 11 часах:
@@ -110,7 +111,6 @@ function addInfoForPatient() {
         <p><i> врач: Орлов В.И. </i></p >
         `;
 }
-
 
 function addCssForPrint() {
     // if (ln.value === 'Трудоспособен. ЛН не нужен.') {
@@ -142,25 +142,25 @@ function addCssForPrint() {
         obrazovania.value = 'нет';
     }
 
-    if (opisanieUzlov.value === '') {
-        opisanieUzlov.innerHTML = 'Геморроидальные узлы на 3, 7, 11 часах: не выраженные геморроидальные узлы.';
-    } else {
-        opisanieUzlov.value = `Геморроидальные узлы на 3, 7, 11 часах: ${opisanieUzlov.value}`;
-    }
+    // if (opisanieUzlov.value === '') {
+    //     opisanieUzlov.innerHTML = 'Геморроидальные узлы на 3, 7, 11 часах: не выраженные геморроидальные узлы.';
+    // } else {
+    //     opisanieUzlov.value = `Геморроидальные узлы на 3, 7, 11 часах: ${opisanieUzlov.value}`;
+    // }
 
-    if (perObl.value === 'не изменена') {
-        perOblAdd.style.display = 'none';
-    }
+    // if (perObl.value === 'не изменена') {
+    //     perOblAdd.style.display = 'none';
+    // }
 
-    if (perOblAdd.value === '') {
-        perOblAdd.parentElement.style.display = 'none';
-    }
-    if (obrazovania.value === '') {
-        obrazovaniaConteiner.style.flexDirection = 'row';
-    }
-    if (otherComplains.value === '') {
-        otherComplains.style.display = 'none';
-    }
+    // if (perOblAdd.value === '') {
+    //     perOblAdd.parentElement.style.display = 'none';
+    // }
+    // if (obrazovania.value === '') {
+    //     obrazovaniaConteiner.style.flexDirection = 'row';
+    // }
+    // if (otherComplains.value === '') {
+    //     otherComplains.style.display = 'none';
+    // }
 
     // * функция для рпазворота даты ЛН в формат дд.мм.гггг.
 
