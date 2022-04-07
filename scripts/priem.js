@@ -82,7 +82,10 @@ function textForCart() {
         <div>Стул: ${stul.value}</div>
         <div>Перианальная область: ${perObl.value + ' ' + ((perOblAdd.value == '') ? '' : perOblAdd.value)}</div>
         <div>Тонус сфинктера: ${tonus.value}</div>       
-        <div>${opisanieUzlov.value}</div>
+        <div>
+        Геморроидальные узлы на 3, 7, 11 часах:
+        ${opisanieUzlov.value == '' ? 'не выраженные внутренние геморроидальные узлы.' : opisanieUzlov.value}
+        </div>
         <div>Выпадение геморроидальных узлов: ${uzly.value}</div>
         <div>Дополнительные образования: ${obrazovania.value}</label>
         <div>Аноскопия: ${anoskopia.value}</div>

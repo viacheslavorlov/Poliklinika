@@ -119,9 +119,17 @@ img {
 #podpis {
     padding-bottom: 2em;
 }
-
+ 
 @media print {
-    main {
+    img {
+        margin-top: 20px;
+    }
+
+    p, b, div {
+        font-size: 21px;
+    }
+
+    /* main {
         font-size: 19px;
     }
     label {
@@ -182,7 +190,5 @@ img {
     #for-patient {
         margin-right: 100px;   
         
-    }
-
+    } */
 }
-
