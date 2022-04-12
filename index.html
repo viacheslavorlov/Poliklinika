@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Амбулаторный прием</title>
+    <title>Колопроктолог, приемный покой НОКБ.</title>
     <link href="style/priemstyle.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <main>
         <header>
-            <h1>Колопроктолог, онколог.</h1>
+            <h1>Колопроктолог, приемный покой НОКБ.</h1>
         </header>
         <div>
             <span>
@@ -88,7 +88,7 @@
                 <label for="per-obl-add">Дополнительно по перианальной области:</label><br>
                 <textarea id="per-obl-add"></textarea>
             </span>
-            
+
             <span>
                 <label for="tonus">Тонус сфинктера: </label>
                 <select id="tonus">
@@ -115,12 +115,13 @@
             </div>
             <div id="obrazovania-container">
                 <label for="obrazovania">Дополнительные образования: </label>
-                <textarea id="obrazovania"></textarea>
+                <textarea id="obrazovania">на высоте осмотра, до 5-6 см не выявлено.</textarea>
             </div>
-            <div>
-                <label for="anoskopia">Аноскопия: </label>
-                <textarea id="anoskopia"></textarea>
+            <div id="na-perchatke-container">
+                <label for="na-perchatke">На перчатке: </label>
+                <textarea id="na-perchatke">кал без крови.</textarea>
             </div>
+                
         </div>
         <div id="for-patient-container">
             <div id="diagnoz-conteiner">
@@ -133,7 +134,8 @@
                         <option value="K64.1 Хронический геморрой 2 ст."> К64.1 Хронический геморрой 2 ст.</option>
                         <option value="K64.2 Хронический геморрой 3 ст."> К64.2 Хронический геморрой 3 ст.</option>
                         <option value="K64.3 Хронический геморрой 4 ст."> К64.3 Хронический геморрой 4 ст.</option>
-                        <option value="K64.5 Острый перианальный венозный тромбоз 1 ст."> К64.5 Острый перианальный венозный
+                        <option value="K64.5 Острый перианальный венозный тромбоз 1 ст."> К64.5 Острый перианальный
+                            венозный
                             тромбоз
                             1 ст.</option>
                         <option value="K64.5 Острый перианальный венозный тромбоз 2 ст."> К64.5 Острый перианальный
@@ -151,8 +153,10 @@
                         <option value="K60.4 Свищ прямой кишки."> K60.4 Свищ прямой кишки.</option>
                         <option value="L29.0 Анальный зуд."> L29.0 Анальный зуд.</option>
                         <option value="K61.0 Острый гнойный парапроктит."> K61.0 Острый гнойный парапроктит.</option>
-                        <option value="L05.9 Эпитедиальный копчиковый ход."> L05.9 Эпитедиальный копчиковый ход.</option>
-                        <option value="L05.0 Эпитедиальный копчиковый ход, нагноение."> L05.0 Эпитедиальный копчиковый ход,
+                        <option value="L05.9 Эпитедиальный копчиковый ход."> L05.9 Эпитедиальный копчиковый ход.
+                        </option>
+                        <option value="L05.0 Эпитедиальный копчиковый ход, нагноение."> L05.0 Эпитедиальный копчиковый
+                            ход,
                             нагноение.</option>
 
                     </select>
@@ -165,23 +169,6 @@
 
             <div id="rekomendacyi">
                 <h2>Рекомендации: </h2>
-                <div id="trudosposobnost">
-                    <label for="trud">Трудоспособность:</label>
-                    <select id="trud">
-                        <option value="Трудоспособен. ЛН не нужен.">Трудоспособен. ЛН не нужен.</option>
-                        <option value="Нетрудоспособен.">Нетрудоспособен.</option>
-                    </select>
-                    <p><label for="dat-ln"></label><select id="dat-ln">
-                            <option value="Выдать первичный">Выдать первичный</option>
-                            <option value="Продлить">Продлить</option>
-                        </select>
-                        больничный лист c <label for="ln-nachalo"></label>
-                        <input id="ln-nachalo" type="text" onfocus="(this.type='date')"
-                            onblur="(this.type='text')">по<label for="ln-konec">
-                            <input id="ln-konec" onfocus="(this.type='date')" onblur="(this.type='text')">
-                        </label>
-                    </p>
-                </div>
                 <div id="obsledovania">
                     <span><input class="recomendation" id="rectoskopia" type="checkbox" value="Ректороманоскопия (Подготовка к ректороманоскопии: микролакс 2 кл.
                                 сутра, 2 клизмы за 1-2 часа до процедуры)">
@@ -333,6 +320,13 @@
                             Контрольный осмотр через 1 неделю.
                         </label>
                     </span>
+                    <span>
+                        <input class="recomendation" id="vidat-ln" type="checkbox"
+                            value="Нетрудоспособен. Оформить ЛН в поликлинике по месту жительства.">
+                        <label for="">
+                            Нетрудоспособен. Оформить ЛН в поликлинике по месту жительства.
+                        </label>
+                    </span>
 
                     <div>
                         <label for="other-lechenie">Другие препараты и рекомендлации: </label>
@@ -349,9 +343,7 @@
     </main>
     <div class="for-cart"></div>
     <hr>
-    <img src='./img/logo.svg'>
     <div class="for-patient"></div>
     <script src="scripts/priem.js"></script>
 </body>
-
 </html>
