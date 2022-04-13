@@ -11,14 +11,14 @@
 
 <body>
     <header>
-        <img src='img/logo.svg'>
+        <img src='img/logo.svg' alt="logo">
         <h1>Ректороманоскопия.</h1>
         <h2><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></h2>
     </header>
     <main>
         <div class="fio">
             <label for="fio__input">Ф.И.О. пациента: </label>
-            <input class="fio__input" type="text">
+            <input id="fio__input" type="text">
             <label for="birthday">Дата рождения: </label>
             <input type="date" name="birthday" id="birthday">
         </div>
@@ -29,16 +29,16 @@
         <div class="opisanie">
             <div>
                 <span>
-                    Перианальная область:
+                    <label for="perianalnaja_oblast">Перианальная область: </label>
                     <select name="perianalnaja_oblast" id="perianalnaja_oblast">
-                        <option value="не изменена.">не изменена.</option>
+                        <option value="не изменена">не изменена.</option>
                         <option value="гиперемирована">гиперемирована</option>
                         <option value="имеется рубцовая деформация">имеется рубцовая деформация</option>
                     </select>
                 </span>
                 <div>
-                    <textarea name=perianalnaja_oblast_dop"
-                        id="perianalnaja_oblast_dop">Дополнительно по перианальной области: </textarea>
+                    <label for="perianalnaja_oblast_dop">Дополнительно по перианальной области: </label>
+                    <textarea name=perianalnaja_oblast_dop" id="perianalnaja_oblast_dop"></textarea>
                 </div>
                 <div>
                     <span>
@@ -52,9 +52,9 @@
                 </div>
                 <div>
                     <span>
-                        <label for="glubina">Осмотр до </label>
+                        <label for="glubina__value">Осмотр до </label>
                         <input type="number" id="glubina__value" min="0" max="30">см
-                        <select>
+                        <select id="konec-osmotra">
                             <option value="далее резкий изгиб, аппарат не провести.">далее резкий изгиб, аппарат не
                                 провести.</option>
                             <option value="на всю длину аппарата">на всю длину аппарата.</option>
@@ -72,12 +72,10 @@
                             <option value="гиперемирована.">гиперемирована.</option>
                             <option value=""></option>
                         </select>
-                        <span id="oblast_giperemii">
-                            c <input type="text" name="slizistaja">см по <input type="text" name="slizistaja">см
-                        </span>
                     </span>
                     <div>
-                        <textarea id="slizistaja__dop">Слизистая</textarea>
+                        <div><label for="slizistaja__dop">Дополнительно по слизистой: </label></div>
+                        <textarea id="slizistaja__dop"></textarea>
                     </div>
                 </div>
                 <div>
@@ -103,8 +101,8 @@
                     </span>
                 </div>
                 <div class="obrazovania">
-                    <label for="dopobrazovanija">Дополнительные образования: </label>
-                    <textarea name="dopobrazovanija" id="dopobrazovanija" row="1"></textarea>
+                    <div><label for="dopobrazovanija">Дополнительные образования: </label></div>
+                    <textarea name="dopobrazovanija" id="dopobrazovanija"></textarea>
                 </div>
                 <div>
                     <label for="uzly">Геморроидальные узлы: </label>
@@ -122,13 +120,25 @@
             </div>
         </div>
         <div class="zakluchenie">
-            <label for="zakluchenie__input"></label>
-            <textarea id="zakluchenie__input">Заключение: </textarea>
+            <div><label for="zakluchenie__input">Заключение: </label></div>
+            <textarea id="zakluchenie__input"></textarea>
         </div>
     </main>
+    <button id="print">Печать</button>
+
+
+    <div id="result-print"></div>
+    <div><i>вр. Орлов В.И.</i></div>
+    <br>
+    <hr>
+    <br>
+    <h1>Ректороманоскопия.</h1>
+    <h2><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></h2>
+    <div id="result-print2"></div>
+
     <footer class="podpis">
         <i>вр. Орлов В.И.</i>
-        <button>Печать</button>
+        <button id="cancel">Отмена</button>
     </footer>
     <script src="scripts/rrs.js"></script>
 </body>
