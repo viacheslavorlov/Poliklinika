@@ -118,14 +118,13 @@
                 <textarea id="obrazovania"></textarea>
             </div>
             <div>
-                <label for="anoskopia">Аноскопия: </label>
-                <textarea id="anoskopia"></textarea>
+                <label for="anoskopia"></label>
+                <textarea id="anoskopia">Аноскопия: </textarea>
             </div>
         </div>
         <div id="for-patient-container">
             <div id="diagnoz-conteiner">
-
-                <label for="diagnoz">
+                <label for="diagnoz"></label>
                     <h2>Диагноз: </h2>
                     <select id="diagnoz">
                         <option value=""></option>
@@ -156,7 +155,7 @@
                             нагноение.</option>
 
                     </select>
-                </label>
+
             </div>
             <div>
                 <label for="diagnoz2"></label>
@@ -343,14 +342,17 @@
 
             <div>
                 <p id="podpis"><i>врач: Орлов В.И.</i></p>
-                <button id="before-print">Форматирование и печать</button>
+
             </div>
         </div>
     </main>
     <div class="for-cart"></div>
     <hr>
-    <img src='./img/logo.svg'>
+    <p><img id="logo" src='./img/logo.svg' alt="logo"></p>
     <div class="for-patient"></div>
+    <button id="before-print">Печать</button>
+    <br>
+    <button id="cancel">Отмена</button>
     <script src="scripts/priem.js"></script>
 </body>
 

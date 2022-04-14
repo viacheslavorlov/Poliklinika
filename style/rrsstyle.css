@@ -48,11 +48,6 @@ input[name='slizistaja'] {
     height: 40px;
 }
 
-#zakluchenie {
-    display: flex;
-    flex-direction: column;
-}
-
 #zakluchenie__input {
     width: 690px;
     font-weight: 800;
@@ -75,34 +70,32 @@ button {
     width: 800px;
 }
 
+#print {
+    background-color: #9de0f7;
+    font-size: 1.5em;
+    margin-bottom: 1.2em;
+}
+
+#cancel {
+    background-color: red;
+    font-size: 1.5em;
+    color: white;
+}
+
+.logo {
+    display: none;
+}
+
 @media print {
-    input,
-    select,
-    option,
-    input[type='date'],
-    textarea {
-        appearance: none;
-        border: none transparent;
-        background-color: #ffffff;
-        resize: none;
-    }
-
-    input[type='date'] {
-        appearance: none;
-    }
-
-    #glubina__value {
-        width: 25px;
-        appearance: textfield;
-        border: none transparent;
-        background-color: #ffffff;
-    }
-
-    textarea {
-        overflow: hidden;
-    }
-
     button {
         display: none;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    div {
+        font-size: 22px;
     }
 }

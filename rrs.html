@@ -10,12 +10,11 @@
 </head>
 
 <body>
-    <header>
-        <img src='img/logo.svg' alt="logo">
-        <h1>Ректороманоскопия.</h1>
-        <h2><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></h2>
-    </header>
     <main>
+        <header>
+            <h1>Ректороманоскопия.</h1>
+            <h2><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></h2>
+        </header>
         <div class="fio">
             <label for="fio__input">Ф.И.О. пациента: </label>
             <input id="fio__input" type="text">
@@ -42,7 +41,7 @@
                 </div>
                 <div>
                     <span>
-                        Сфинктр в
+                        <label for="tonus">Сфинктр в </label>
                         <select name="tonus" id="tonus">
                             <option value="нормотонусе">нормотонусе</option>
                             <option value="гипертонусе">гипертонусе</option>
@@ -53,8 +52,8 @@
                 <div>
                     <span>
                         <label for="glubina__value">Осмотр до </label>
-                        <input type="number" id="glubina__value" min="0" max="30">см
-                        <select id="konec-osmotra">
+                        <input type="number" id="glubina__value" min="0" max="30">
+                        <label for="konec-osmotra">см</label><select id="konec-osmotra">
                             <option value="далее резкий изгиб, аппарат не провести.">далее резкий изгиб, аппарат не
                                 провести.</option>
                             <option value="на всю длину аппарата">на всю длину аппарата.</option>
@@ -119,25 +118,26 @@
                 </div>
             </div>
         </div>
+        <div class="biopsia">
+            <input type="checkbox" name="biopsia" id="biopsia">
+            <label for="biopsia">Биопсия.</label>
+        </div>
         <div class="zakluchenie">
             <div><label for="zakluchenie__input">Заключение: </label></div>
             <textarea id="zakluchenie__input"></textarea>
         </div>
+        <div><i>вр. Орлов В.И.</i></div>
     </main>
-    <button id="print">Печать</button>
-
-
+    <img class="logo" src='img/logo.svg' alt="logo">
     <div id="result-print"></div>
-    <div><i>вр. Орлов В.И.</i></div>
     <br>
     <hr>
     <br>
-    <h1>Ректороманоскопия.</h1>
-    <h2><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></h2>
+    <img class="logo" src='img/logo.svg' alt="logo">
     <div id="result-print2"></div>
 
     <footer class="podpis">
-        <i>вр. Орлов В.И.</i>
+        <button id="print">Печать</button>
         <button id="cancel">Отмена</button>
     </footer>
     <script src="scripts/rrs.js"></script>

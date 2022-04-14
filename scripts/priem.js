@@ -16,21 +16,28 @@ const ln = document.querySelector('#trud');
 const lnNachalo = document.querySelector('#ln-nachalo');
 const lnKonec = document.querySelector('#ln-konec');
 const datLn = document.querySelector('#dat-ln');
-const otherObsledovania = document.querySelector('#other-obsledovania');
-const otherLechenie = document.querySelector('#other-lechenie');
 const date = document.querySelector('#date');
-const obrazovaniaConteiner = document.querySelector('#obrazovania-conteiner');
 const prepareForPrintButton = document.querySelector('#before-print');
 const forPatient = document.querySelector('.for-patient');
 const forCart = document.querySelector('.for-cart');
 const tonus = document.querySelector('#tonus');
 const condition = document.querySelector('#condition');
 const stul = document.querySelector('#stul');
-
+const cancel = document.querySelector('#cancel');
+const main = document.querySelector('main');
 
 
 //установить дату приёма на сегодняшний день
 date.valueAsDate = new Date();
+
+// ! функции !
+function hideElement(elem) {
+    elem.style.display = 'none';
+}
+
+function showElement(elem) {
+    elem.style.display = 'block';
+}
 
 // ! Блок для пациента.
 function recomendationList() {
@@ -38,7 +45,7 @@ function recomendationList() {
     const recomendation = document.querySelectorAll('.recomendation');
     const recomendation2 = document.querySelectorAll('.recomendation2');
     for (let j = 0; j < recomendation2.length; j++) {
-        if (recomendation2[j].value != '') {
+        if (recomendation2[j].value !== '') {
             list.push(recomendation2[j].value);
         }
     }
@@ -52,7 +59,6 @@ function recomendationList() {
         list.push([`${ln.value} ${datLn.value} больничный лист
         c ${lnNachalo.value.split('-').reverse().join('.')} по ${lnKonec.value.split('-').reverse().join('')}.
         Контрольная явка на ${lnKonec.value.split('-').reverse().join('')}`]);
-
     }
     return list.join('<br>');
 }
@@ -71,7 +77,7 @@ function textForCart() {
         
     
     forCart.innerHTML = `
-        <h2><b>Прием колопроктолога.</b></h2>
+        <h2>Прием колопроктолога.</h2>
         <p><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></p>
         <p> Дата: ${date.value.split('-').reverse().join('.')}</p>
         <p>Пациент: ${patientName.value} Дата рождения: ${birthday.value.split('-').reverse().join('.')}</p>
@@ -80,17 +86,17 @@ function textForCart() {
         <div>Состояние: ${condition.value}</div>
         <div>Стул: ${stul.value}</div>
         <div>
-        Перианальная область: ${(perObl.value == '') ? 'не изменена.' : perObl.value + ' ' +  perOblAdd.value}
+        Перианальная область: ${(perObl.value === '') ? 'не изменена.' : perObl.value + ' ' +  perOblAdd.value}
         </div>
         <div>Тонус сфинктера: ${tonus.value}</div>       
         <div>
         Геморроидальные узлы на 3, 7, 11 часах:
-        ${opisanieUzlov.value == '' ? 'не выраженные внутренние геморроидальные узлы.' : opisanieUzlov.value}
+        ${opisanieUzlov.value === '' ? 'не выраженные внутренние геморроидальные узлы.' : opisanieUzlov.value}
         </div>
         <div>Выпадение геморроидальных узлов: ${uzly.value}</div>
         <div>Дополнительные образования: ${obrazovania.value}</label>
-        <div>Аноскопия: ${anoskopia.value}</div>
-        <p><bolb>Диагноз: ${(diagnoz.value == '') ? diagnoz2.value : diagnoz.value + ' ' + diagnoz2.value}</bolb></p>
+        <div>${(anoskopia.value === 'Аноскопия: ') ? anoskopia.value = '' : anoskopia.value}</div>
+        <p><b>Диагноз: ${diagnoz.value + ' ' + diagnoz2.value}</b></p>
         <p>Рекомендации:</p>
         <div>${recomendationList()}</div>
         <p><i> врач: Орлов В.И. </i></p >
@@ -101,11 +107,11 @@ function addInfoForPatient() {
 
     forPatient.innerHTML =
         `
-        <h2><b>Прием колопроктолога.</b></h2>
+        <h2>Прием колопроктолога.</h2>
         <p><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></p>
         <p>Дата: ${date.value.split('-').reverse().join('.')}</p>
         <p>Пациент: ${patientName.value} Дата рождения: ${birthday.value.split('-').reverse().join('.')}</p>
-        <p><b>Диагноз: ${(diagnoz.value == '') ? diagnoz2.value : diagnoz.value + ' ' + diagnoz2.value}</b></p>
+        <p><b>Диагноз: ${(diagnoz.value === '') ? diagnoz2.value : diagnoz.value + ' ' + diagnoz2.value}</b></p>
         <p><b>Рекомендации:</b></p>
         <div><b>${recomendationList()}</b></div>
         <p><i> врач: Орлов В.И. </i></p >
@@ -113,75 +119,41 @@ function addInfoForPatient() {
 }
 
 function addCssForPrint() {
-    // if (ln.value === 'Трудоспособен. ЛН не нужен.') {
-    //     datLn.parentElement.style.display = 'none';
-    //     ln.parentElement.style.display = 'none';
-    // }
-    
-    // if (otherLechenie.value === '') {
-    //     otherLechenie.parentElement.style.display = 'none';
-    // }
-    
-    // if (otherObsledovania.value === '') {
-    //     otherObsledovania.parentElement.style.display = 'none';
-    // }
-    
-    // if (diagnoz2.value === '') {
-    //     diagnoz2.parentElement.style.display = 'none';
-    // }
-    
-    // if (otherObsledovania.value === '') {
-    //     otherObsledovania.parentElement.style.display = 'none';
-    // }
-    
-    // if (anoskopia.value === '') {
-    //     anoskopia.parentElement.style.display = 'none';
-    // }
-    
     if (obrazovania.value === '') {
         obrazovania.value = 'нет';
     }
 
-    // if (opisanieUzlov.value === '') {
-    //     opisanieUzlov.innerHTML = 'Геморроидальные узлы на 3, 7, 11 часах: не выраженные геморроидальные узлы.';
-    // } else {
-    //     opisanieUzlov.value = `Геморроидальные узлы на 3, 7, 11 часах: ${opisanieUzlov.value}`;
-    // }
-
-    // if (perObl.value === 'не изменена') {
-    //     perOblAdd.style.display = 'none';
-    // }
-
-    // if (perOblAdd.value === '') {
-    //     perOblAdd.parentElement.style.display = 'none';
-    // }
-    // if (obrazovania.value === '') {
-    //     obrazovaniaConteiner.style.flexDirection = 'row';
-    // }
-    // if (otherComplains.value === '') {
-    //     otherComplains.style.display = 'none';
-    // }
-
     // * функция для рпазворота даты ЛН в формат дд.мм.гггг.
-
     lnNachalo.value = lnNachalo.value.split('-').reverse().join('.');
     lnKonec.value = lnKonec.value.split('-').reverse().join('.');
 }
 
 
-prepareForPrintButton.addEventListener('click', function (e) {
+prepareForPrintButton.addEventListener('click', () => {
     addCssForPrint();
     textForCart();
     addInfoForPatient();
-    document.querySelector('main').style.display = 'none';
+    hideElement(main);
+    showElement(forPatient);
+    showElement(forCart);
     window.print();
 });
 
 document.addEventListener('keydown', function (e) {
     if (e.code === 'KeyP' && e.ctrlKey) {
+        e.preventDefault();
         addCssForPrint();
         textForCart();
-        document.querySelector('main').style.display = 'none';
         addInfoForPatient();
+        hideElement(main);
+        showElement(forPatient);
+        showElement(forCart);
+        window.print();
     }
 });
+
+cancel.addEventListener('click', function () {
+    showElement(main);
+    hideElement(forCart);
+    hideElement(forPatient)
+})

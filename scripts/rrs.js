@@ -22,6 +22,7 @@ const zakluchenie = document.querySelector('#zakluchenie__input');
 const result = document.querySelector('#result-print');
 const result2 = document.querySelector('#result-print2');
 const cancel = document.querySelector('#cancel');
+const biopsia = document.querySelector('#biopsia');
 
 // установка даты
 date.valueAsDate = new Date();
@@ -44,6 +45,8 @@ function showElement(elem) {
 
 function addResult(place) {
     place.innerHTML = `
+    <h1>Ректороманоскопия.</h1>
+    <h2><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></h2>
     <div>Ф.И.О. пациента: ${fio.value}   Дата рождения: ${birthday.value.split('-').reverse().join('.')}</div>
     <div>Дата осмотра: ${date.value.split('-').reverse().join('.')}</div>
     <div>Перианальная область: ${perObl.value}. ${perOblDop.value}</div>
@@ -55,6 +58,9 @@ function addResult(place) {
     <div>Дополнительные образования: ${dopobrazovanija.value}</div>
     <div>Геморроидальные узлы: ${uzly.value}</div>
     <div>Заключение: ${zakluchenie.value}</div>
+    <div>${(biopsia.checked) ? 'Явка за результатми биопсии через 10 дней' : ''}</div>
+    <br>
+    <div><i>вр. Орлов В.И.</i></div>
     `;
 }
 

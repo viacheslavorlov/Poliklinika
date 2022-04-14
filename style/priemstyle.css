@@ -17,9 +17,6 @@ div {
 label[for='other'] {
     display: flex;
 }
-.space {
-    width: 10px;
-}
 
 main {
     font-family: 'Times New Roman', Times, serif;
@@ -44,8 +41,7 @@ textarea {
 
 #diagnoz-conteiner {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
 }
 
 h1 {
@@ -64,14 +60,12 @@ h2 {
 #diagnoz {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.2em;
-    font: bold;
     font-weight: 600;
 }
 
 #diagnoz2 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.2em;
-    font: bold;
     font-weight: 600;
 }
 
@@ -105,12 +99,6 @@ input[type='text'] {
     width: 90px;
 }
 
-#for-patient {
-    display: flex;
-    width: 700px;
-    margin-right: 100px;    
-}
-
 img {
     height: 100px;
     margin-left: 0;
@@ -118,6 +106,25 @@ img {
 
 #podpis {
     padding-bottom: 2em;
+}
+
+#before-print {
+    background-color: #9de0f7;
+    height: 40px;
+    width: 800px;
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+#cancel {
+    background-color: red;
+    height: 40px;
+    width: 800px;
+    font-size: 1.5em;
+}
+
+#logo {
+    display: none;
 }
  
 @media print {
@@ -129,67 +136,11 @@ img {
         font-size: 20px;
         padding: 0;
     }
-
-    /* main {
-        font-size: 19px;
-    }
-    label {
-        font-size: 19px;
-    }
-
-    .complains-container {
-        display: flex;
-        flex-direction: row;
-    }
-    input[type='checkbox'] {
-        display: none;
-    }
-    input[type='checkbox'] + label {
-        display: none;
-    }
-    input[type='checkbox']:checked + label {
-        display: flex;
-    }
-    input[type='date'] {
-        border: none transparent;
-    }
-    input[type='text'] {
-        appearance: none;
-        border: none transparent;
-    }
-    textarea {
-        border: none transparent;
-        appearance: none;
-        resize: none;
-        font-size: 19px;
-    }
-    select {
-        border: none transparent;
-        appearance: none;
-        font-size: 19px;
-    }
-
     button {
         display: none;
     }
-    label[for='trud'] {
-        display: none;
-    }
-    label[for='opisanie-uzlov'] {
-        display: none;
-    }
-    label[for='other-lechenie'] {
-        display: none;
-    }
-    label[for='other-obsledovania'] {
-        display: none;
-    }
-    label[for='other'] {
-        display: none;
-    }
 
-    #for-patient {
-        margin-right: 100px;   
-        
-    } */
+    #logo {
+        display: block;
+    }
 }
