@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Амбулаторный прием</title>
-    <link href="./style.css" rel="stylesheet" type="text/css">
+    <link href="style/priemstyle.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -25,27 +25,28 @@
         <span>
             <label for="date">Дата: </label>
             <input id="date" type="date">
-        </span>    
-        <div>
+        </span>
+        <div id="osmotr">
             <p class="complains-container">Жалобы:
                 <span>
-                    <input id="blood" type="checkbox" class="complains" name="complains" value="blood">
+                    <input id="blood" type="checkbox" class="complains" name="complains" value="кровь в стуле">
                     <label for="blood">Кровь в стуле</label>
 
-                    <input id="pain" type="checkbox" class="complains" name="complains" value="pain">
+                    <input id="pain" type="checkbox" class="complains" name="complains" value="боль при дефекации">
                     <label for="pain">Боль при дефекации </label>
 
-                    <input id="neo" type="checkbox" class="complains" name="complains" value="neo">
+                    <input id="neo" type="checkbox" class="complains" name="complains"
+                        value="образование в области ануса">
                     <label for="neo">Образование в области ануса </label>
 
-                    <input id="itch" type="checkbox" class="complains" name="complains" value="itch">
+                    <input id="itch" type="checkbox" class="complains" name="complains" value="зуд в анальном канале">
                     <label for="itch">Зуд в анальном канале </label>
 
-                    <input id="no" type="checkbox" class="complains" name="complains" value="no">
+                    <input id="no" type="checkbox" class="complains" name="complains" value="нет">
                     <label for="no">Нет </label>
 
                     <label for="other">Другие жалобы: </label>
-                    <textarea id="other" class="complains" name="complains"></textarea>
+                    <textarea id="other" name="complains"></textarea>
                 </span>
             </p>
 
@@ -57,19 +58,19 @@
         <div id="sostojanie">
             <label for="condition">Состояние: </label>
             <select name="condition" id="condition">
-                <option value="ud">удовлетворительное</option>
-                <option value="otn-ud">относительно удовлетворительное</option>
-                <option value="sr">средней тяжести</option>
+                <option value="удовлетворительное">удовлетворительное</option>
+                <option value="относительно удовлетворительное">относительно удовлетворительное</option>
+                <option value="средней тяжести">средней тяжести</option>
             </select>
         </div>
         <div>
             <span>
                 <label for="stul">Стул: </label>
                 <select name="stul" id="stul">
-                    <option value="">Нормальный</option>
-                    <option value="">Запоры</option>
-                    <option value="">Жидкий стул</option>
-                    <option value="">Чередование запоров и поносов</option>
+                    <option value="Нормальный">Нормальный</option>
+                    <option value="Запоры">Запоры</option>
+                    <option value="Жидкий стул">Жидкий стул</option>
+                    <option value="Чередование запоров и поносов">Чередование запоров и поносов</option>
                 </select>
             </span>
         </div>
@@ -77,18 +78,23 @@
             <span>
                 <label for="per-obl">Перианальная область: </label>
                 <select id="per-obl">
-                    <option value="norm">Не изменена.</option>
-                    <option value="giper">Гиперемирована.</option>
-                    <option value="scar">Деформирована за счет послеоперационных рубцов.</option>
+                    <option value=""></option>
+                    <option value="не изменена">Не изменена.</option>
+                    <option value="Гиперемирована">Гиперемирована.</option>
+                    <option value="Деформирована за счет послеоперационных рубцов.">Деформирована за счет
+                        послеоперационных рубцов.</option>
                 </select>
+                <br>
+                <label for="per-obl-add">Дополнительно по перианальной области:</label><br>
+                <textarea id="per-obl-add"></textarea>
             </span>
-            <textarea id="per-obl-add">Дополнительно по перианальной области: </textarea>
+            
             <span>
                 <label for="tonus">Тонус сфинктера: </label>
                 <select id="tonus">
-                    <option value="norm">Нормотонус</option>
-                    <option value="giper">Гипертонус</option>
-                    <option value="gipo">Гипотонус</option>
+                    <option value="Нормотонус">Нормотонус</option>
+                    <option value="Гипертонус">Гипертонус</option>
+                    <option value="Гипотонус">Гипотонус</option>
                 </select>
             </span>
             <div>
@@ -99,10 +105,11 @@
                 <span>
                     <label for="uzly">Выпадение геморроидальных узлов: </label>
                     <select id="uzly">
-                        <option value="net">Нет</option>
-                        <option value="samostojatelno">Вправляются самостоятельно</option>
-                        <option value="ruchnoe-posobie">Требуют ручного пособия при вправлении</option>
-                        <option value="nevpravimie">Невправимое выпадение узлов</option>
+                        <option value="Нет">Нет</option>
+                        <option value="Вправляются самостоятельно">Вправляются самостоятельно</option>
+                        <option value="Требуют ручного пособия при вправлении">Требуют ручного пособия при вправлении
+                        </option>
+                        <option value="Невправимое выпадение узлов">Невправимое выпадение узлов</option>
                     </select>
                 </span>
             </div>
@@ -111,40 +118,44 @@
                 <textarea id="obrazovania"></textarea>
             </div>
             <div>
-                <label for="anoskopia">Аноскопия: </label>
-                <textarea id="anoskopia" placeholder=""></textarea>
+                <label for="anoskopia"></label>
+                <textarea id="anoskopia">Аноскопия: </textarea>
             </div>
         </div>
         <div id="for-patient-container">
             <div id="diagnoz-conteiner">
-                
-                <label for="diagnoz"><h2>Диагноз: </h2>
+                <label for="diagnoz"></label>
+                    <h2>Диагноз: </h2>
                     <select id="diagnoz">
                         <option value=""></option>
-                        <option value="Хронический геморрой 1 ст."> К64.0 Хронический геморрой 1 ст.</option>
-                        <option value="Хронический геморрой 2 ст."> К64.1 Хронический геморрой 2 ст.</option>
-                        <option value="Хронический геморрой 3 ст."> К64.2 Хронический геморрой 3 ст.</option>
-                        <option value="Хронический геморрой 4 ст."> К64.3 Хронический геморрой 4 ст.</option>
-                        <option value="Острый перианальный венозный тромбоз 1 ст."> К64.5 Острый перианальный венозный
+                        <option value="K64.0 Хронический геморрой 1 ст."> К64.0 Хронический геморрой 1 ст.</option>
+                        <option value="K64.1 Хронический геморрой 2 ст."> К64.1 Хронический геморрой 2 ст.</option>
+                        <option value="K64.2 Хронический геморрой 3 ст."> К64.2 Хронический геморрой 3 ст.</option>
+                        <option value="K64.3 Хронический геморрой 4 ст."> К64.3 Хронический геморрой 4 ст.</option>
+                        <option value="K64.5 Острый перианальный венозный тромбоз 1 ст."> К64.5 Острый перианальный венозный
                             тромбоз
                             1 ст.</option>
-                        <option value="Острый перианальный венозный тромбоз 2 ст."> К64.5 Острый перианальный венозный
+                        <option value="K64.5 Острый перианальный венозный тромбоз 2 ст."> К64.5 Острый перианальный
+                            венозный
                             тромбоз
                             2 ст.</option>
-                        <option value="Острый перианальный венозный тромбоз 3 ст."> К64.5 Острый перианальный венозный
+                        <option value="K64.5 Острый перианальный венозный тромбоз 3 ст."> К64.5 Острый перианальный
+                            венозный
                             тромбоз
                             3 ст.</option>
-                        <option value="Острая анальная трещина."> К60.0 Острая анальная трещина.</option>
-                        <option value="Хроническая анальная трещина."> К60.1 Хроническая анальная трещина.</option>
-                        <option value="Полип анального канала."> K62.0 Полип анального канала.</option>
-                        <option value="Свищ прямой кишки."> K60.4 Свищ прямой кишки.</option>
-                        <option value="Анальный зуд."> L29.0 Анальный зуд.</option>
-                        <option value="Острый гнойный парапроктит."> K61.0 Острый гнойный парапроктит.</option>
-                        <option value="Эпитедиальный копчиковый ход."> L05.9 Эпитедиальный копчиковый ход.</option>
-                        <option value="Эпитедиальный копчиковый ход, нагноение."> L05.0 Эпитедиальный копчиковый ход, нагноение.</option>
+                        <option value="K60.0 Острая анальная трещина."> К60.0 Острая анальная трещина.</option>
+                        <option value="K60.1 Хроническая анальная трещина."> К60.1 Хроническая анальная трещина.
+                        </option>
+                        <option value="K62.0 Полип анального канала."> K62.0 Полип анального канала.</option>
+                        <option value="K60.4 Свищ прямой кишки."> K60.4 Свищ прямой кишки.</option>
+                        <option value="L29.0 Анальный зуд."> L29.0 Анальный зуд.</option>
+                        <option value="K61.0 Острый гнойный парапроктит."> K61.0 Острый гнойный парапроктит.</option>
+                        <option value="L05.9 Эпитедиальный копчиковый ход."> L05.9 Эпитедиальный копчиковый ход.</option>
+                        <option value="L05.0 Эпитедиальный копчиковый ход, нагноение."> L05.0 Эпитедиальный копчиковый ход,
+                            нагноение.</option>
 
                     </select>
-                </label>
+
             </div>
             <div>
                 <label for="diagnoz2"></label>
@@ -171,7 +182,8 @@
                     </p>
                 </div>
                 <div id="obsledovania">
-                    <span><input class="recomendation" id="rectoskopia" type="checkbox" value="Ректороманоскопия">
+                    <span><input class="recomendation" id="rectoskopia" type="checkbox" value="Ректороманоскопия (Подготовка к ректороманоскопии: микролакс 2 кл.
+                                сутра, 2 клизмы за 1-2 часа до процедуры)">
                         <label for="rectoskopia">Ректороманоскопия</label></span>
 
                     <span><input class="recomendation" id="colonoskopia" type="checkbox" value="Колоноскопия">
@@ -313,6 +325,13 @@
                             Плановое оперативное лечение.
                         </label>
                     </span>
+                    <span>
+                        <input class="recomendation" id="kontrolnij-osmotr" type="checkbox"
+                            value="Контрольный осмотр через 1 неделю">
+                        <label for="kontrolnij-osmotr">
+                            Контрольный осмотр через 1 неделю.
+                        </label>
+                    </span>
 
                     <div>
                         <label for="other-lechenie">Другие препараты и рекомендлации: </label>
@@ -323,14 +342,18 @@
 
             <div>
                 <p id="podpis"><i>врач: Орлов В.И.</i></p>
-                <button id="before-print">Форматирование и печать</button>
+
             </div>
         </div>
-        <hr>
-        <div class="for-patient"></div>
-
     </main>
-    <script src="./script.js"></script>
+    <div class="for-cart"></div>
+    <hr>
+    <p><img id="logo" src='./img/logo.svg' alt="logo"></p>
+    <div class="for-patient"></div>
+    <button id="before-print">Печать</button>
+    <br>
+    <button id="cancel">Отмена</button>
+    <script src="scripts/priem.js"></script>
 </body>
 
 </html>

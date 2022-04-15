@@ -19,30 +19,33 @@ h2 {
 
 input[type='date'] {
     font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
 }
 
-span input[type='text'] {
+span input[type='number'] {
+    width: 45px;
+}
+
+input[name='slizistaja'] {
     width: 25px;
 }
 
 #perianalnaja_oblast_dop {
     height: 2em;
     width: 690px;
-    resize: none;
+    resize: both;
 }
 
 .obrazovania {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: baseline;
+
 }
 
 #dopobrazovanija {
     width: 550px;
-    height: 1.5em;
-    resize: none;
-    margin-left: 5px;
+    resize: both;
+    height: 40px;
 }
 
 #zakluchenie__input {
@@ -54,7 +57,7 @@ span input[type='text'] {
 #slizistaja__dop {
     height: 2em;
     width: 690px;
-    resize: none;
+    resize: both;
 }
 
 footer {
@@ -62,23 +65,37 @@ footer {
     flex-direction: column;
 }
 
+button {
+    height: 40px;
+    width: 800px;
+}
+
+#print {
+    background-color: #9de0f7;
+    font-size: 1.5em;
+    margin-bottom: 1.2em;
+}
+
+#cancel {
+    background-color: red;
+    font-size: 1.5em;
+    color: white;
+}
+
+.logo {
+    display: none;
+}
+
 @media print {
-    input,
-    select,
-    option,
-    input[type='date'],
-    textarea {
-        appearance: none;
-        border: none transparent;
-        background-color: #ffffff;
-    }
-
-    input[type='range'] {
-        display: none;
-    }
-
     button {
         display: none;
     }
 
+    .logo {
+        display: block;
+    }
+
+    div {
+        font-size: 22px;
+    }
 }
