@@ -43,6 +43,9 @@ textarea {
     display: flex;
     flex-direction: column;
 }
+.posle-operacii {
+    display: block;
+}
 
 h1 {
     margin: 0;

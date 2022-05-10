@@ -67,6 +67,9 @@ function recomendationList() {
 function textForCart() {
     const complains = document.querySelectorAll('.complains'),
           uzly = document.querySelector('#uzly');
+        let posleOperacii = (document.querySelector('#posle-operacii').checked) ?
+                    document.querySelector('#posle-operacii').value : '';
+
         let listOfComplains = [];
         complains.forEach(function(item) {
             if (item.checked) {
@@ -96,7 +99,7 @@ function textForCart() {
         <div>Выпадение геморроидальных узлов: ${uzly.value}</div>
         <div>Дополнительные образования: ${obrazovania.value}</label>
         <div>${(anoskopia.value === 'Аноскопия: ') ? anoskopia.value = '' : anoskopia.value}</div>
-        <p><b>Диагноз: ${diagnoz.value + ' ' + diagnoz2.value}</b></p>
+        <p><b>Диагноз: ${diagnoz.value + ' ' + diagnoz2.value + ' ' + posleOperacii}</b></p>
         <p>Рекомендации:</p>
         <div>${recomendationList()}</div>
         <p><i> врач: Орлов В.И. </i></p >
@@ -104,14 +107,15 @@ function textForCart() {
 }
 
 function addInfoForPatient() {
-
+    let posleOperacii = (document.querySelector('#posle-operacii').checked) ?
+        document.querySelector('#posle-operacii').value : '';
     forPatient.innerHTML =
         `
         <h2>Прием колопроктолога.</h2>
         <p><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></p>
         <p>Дата: ${date.value.split('-').reverse().join('.')}</p>
         <p>Пациент: ${patientName.value} Дата рождения: ${birthday.value.split('-').reverse().join('.')}</p>
-        <p><b>Диагноз: ${(diagnoz.value === '') ? diagnoz2.value : diagnoz.value + ' ' + diagnoz2.value}</b></p>
+        <p><b>Диагноз: ${diagnoz.value + ' ' + diagnoz2.value + ' ' + posleOperacii}</b></p>
         <p><b>Рекомендации:</b></p>
         <div><b>${recomendationList()}</b></div>
         <p><i> врач: Орлов В.И. </i></p >
