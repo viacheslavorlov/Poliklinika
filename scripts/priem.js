@@ -60,6 +60,11 @@ function recomendationList() {
         c ${lnNachalo.value.split('-').reverse().join('.')} по ${lnKonec.value.split('-').reverse().join('')}.
         Контрольная явка на ${lnKonec.value.split('-').reverse().join('')}`]);
     }
+    if (ln.value === 'Закрыть больничный лист.') {
+        let lnClose = new Date(date.valueAsDate.setDate(date.valueAsDate.getDate() + 1)).toISOString();
+        lnClose = lnClose.slice(0,10).split('-').reverse().join('.');
+        list.push([`ЛН закрыт ${date.value.split('-').reverse().join('.')}. К труду с ${lnClose}`]);
+    }
     return list.join('<br>');
 }
 
