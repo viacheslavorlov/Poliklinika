@@ -66,8 +66,7 @@ function textForCart() {
         
     
     forCart.innerHTML = `
-        <h2><b>Прием колопроктолога.</b></h2>
-        <p><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></p>
+        <h2><b>Приемный покой НОКБ, колопроктолог.</b></h2>
         <p> Дата: ${date.value.split('-').reverse().join('.')}</p>
         <p>Пациент: ${patientName.value} Дата рождения: ${birthday.value.split('-').reverse().join('.')}</p>
         <div>Жалобы: ${listOfComplains. join(', ')}</div>
@@ -85,7 +84,7 @@ function textForCart() {
         <div>Выпадение геморроидальных узлов: ${uzly.value}</div>
         <div>Дополнительные образования: ${obrazovania.value}</label>
         <div>На перчатке: ${naPerchatke.value}</div>
-        <p><b>Диагноз: ${(diagnoz.value == '') ? diagnoz2.value : diagnoz.value + ' ' + diagnoz2.value}</b></p>
+        <p><b>Диагноз: ${diagnoz.value + ' ' + diagnoz2.value}</b></p>
         <p>Рекомендации:</p>
         <div>${recomendationList()}</div>
         <p><i> врач: Орлов В.И. </i></p >
@@ -95,11 +94,10 @@ function textForCart() {
 function addInfoForPatient() {
     forPatient.innerHTML =
         `
-        <h2><b>Прием колопроктолога.</b></h2>
-        <p><i>ул.Рахманинова д. 10. тел. 78-78-20, 78-20-20.</i></p>
+        <h2><b>Приемный покой НОКБ, колопроктолог.</b></h2 >
         <p>Дата: ${date.value.split('-').reverse().join('.')}</p>
         <p>Пациент: ${patientName.value} Дата рождения: ${birthday.value.split('-').reverse().join('.')}</p>
-        <p><b>Диагноз: ${(diagnoz.value == '') ? diagnoz2.value : diagnoz.value + ' ' + diagnoz2.value}</b></p>
+        <p><b>Диагноз: ${diagnoz.value + ' ' + diagnoz2.value}</b></p>
         <p><b>Рекомендации:</b></p>
         <div><b>${recomendationList()}</b></div>
         <p><i> врач: Орлов В.И. </i></p >
