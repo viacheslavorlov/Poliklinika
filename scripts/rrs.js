@@ -13,10 +13,8 @@ const slizistajaDop = document.querySelector('#slizistaja__dop');
 const skladki = document.querySelector('#skladki');
 const sosudRis = document.querySelector('#sosudistiy_risunok');
 const button = document.querySelector('#print');
-const oblastGiperemii = document.querySelector('#oblast_giperemii');
 const slizistaja = document.querySelector('#slizistaja');
 const dopobrazovanija = document.querySelector('#dopobrazovanija');
-const sosudistiyRisunok = document.querySelector('#sosudistiy_risunok');
 const uzly = document.querySelector('#uzly');
 const zakluchenie = document.querySelector('#zakluchenie__input');
 const result = document.querySelector('#result-print');
@@ -77,7 +75,7 @@ function prepareAndPrint() {
 }
 
 // ADD Listener
-button.addEventListener('click', (e) => {
+button.addEventListener('click', () => {
     prepareAndPrint();
 });
 

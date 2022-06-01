@@ -111,6 +111,11 @@ img {
     padding-bottom: 2em;
 }
 
+p, b, div, select, textarea {
+    font-size: 22px;
+    padding: 0;
+}
+
 #before-print {
     background-color: #9de0f7;
     height: 40px;
@@ -135,10 +140,6 @@ img {
         margin-top: 10px;
     }
 
-    p, b, div {
-        font-size: 20px;
-        padding: 0;
-    }
     button {
         display: none;
     }
